@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CONTROL-XMLShutdown.XML-->
+<!-- SOAP RPC BODY requires fully qualified element name with namespace, thus the next line --> 
+<ns1:FORMDATA xmlns:ns1="http://appdev.cincom.com/MantisServer" NAME="CONTROL-XMLSHUTDOWN">
+	<MESSAGE1>Explicit client request to terminate MANTIS connection</MESSAGE1>
+	<STATUS>TIMEOUT</STATUS>
+</ns1:FORMDATA>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--MASTER-SIGN_ON.XSL-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<!-- Place Includes for individual XSLs below -->
+<xsl:include href="MASTER-SIGN_ON-INC.xsl"/>
+<xsl:include href="MANTIS-COMMON.xsl"/>
+<xsl:output method="html" indent="yes"/>
+<xsl:template match="/">
+<html><head>
+  <xsl:call-template name="MANTIS-HEAD"/>
+  <xsl:call-template name="MANTIS-TITLE"/>
+</head><body topmargin="0" leftmargin="0">
+  <xsl:call-template name="FORM-BODY_ONLOAD"/>
+<form action="Resume" METHOD="POST" onSubmit="return checksubmit()" autocomplete="off">
+  <input type="hidden" name="@NAME" value="{//@NAME}"/>
+  <!-- add and arrange apply-template selects below -->
+  <xsl:apply-templates select="//MASTER-SIGN_ON"/>
+  <xsl:call-template name="MANTIS-END"/>
+</form></body>
+<script language="JavaScript1.2" type="text/javascript" src="MASTER-SIGN_ON_askip.js"/>
+</html></xsl:template></xsl:stylesheet>

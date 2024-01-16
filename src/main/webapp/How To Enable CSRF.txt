@@ -1,0 +1,45 @@
+CSRF code has been included in the code for MANTIS. However, it is turned OFF by default. Follow these steps to turn CSRF functionality on:
+
+1)	In the web.xml located in the WEB-INF folder, add the following sections:
+    <filter>
+        <filter-name>CSRFPreventionFilter</filter-name>
+        <filter-class>
+			com.cincom.MantisWeb.MantisCsrfPreventionFilter
+        </filter-class>
+        <init-param>
+            <param-name>entryPoints</param-name>
+            <param-value>/index.jsp,/start.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>nonceCacheSize</param-name>
+            <param-value>100</param-value>
+        </init-param>
+        <init-param>
+            <param-name>denyStatus</param-name>
+            <param-value>403</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CSRFPreventionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+2) You must re-compile the Java classes in this project. This is located in the <webapp folder>\src\com\cincom\MantisWeb folder.
+	This contains instructions in a "TODO BEFORE COMPILE.txt" file which you need to follow in order to compile the classes correctly with the CSRF.
+
+
+NOTES FOR INSTALLER:
+a) the "entryPoints" parameter in Step 1 is where you define the starting page that the user must go through in order to have the nonce generated. 
+start.jsp and index.jsp are provided as samples for what the page should contain to redirect to the correct start login page. You can call the page(s) whatever you want.
+The pages need to be .jsp pages (java server pages) and contain the basic functionality as defined in the samples provided.
+
+b) web.csrf.xml is a sample file provided for you to turn on CSRF functionality. This is located in the WEB-INF folder under the web root.
+
+c) To test whether this is working, go directly to the Start login page. You should get a 403 error message.
+The means of getting to the Start Login page correctly is to go through the 'entrypoint' pages defined above.
+
+d) There are 2 entry point pages provided as samples for you. You can create 1 or multiple entrypoints for getting to your site.
+	i) start.jsp - automatically redirects the user to the Start login screen after 200 milliseconds
+	ii) index.jsp - displays a page with a link on it to the Start login screen that needs to be clicked by the user

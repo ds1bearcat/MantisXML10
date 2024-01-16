@@ -1,0 +1,13 @@
+<html>
+      <script type='text/javascript'>
+      function runWebApp() {
+         var currentHost = window.location.host;
+         var currentURL = window.location.pathname;
+         currentURL = currentURL.substr(0,currentURL.lastIndexOf('/'));
+         var changedURL = "http://"+currentHost+currentURL+"/Start?XML=CONTROL-EclipseRun";
+         window.location.replace(changedURL);
+         }
+      </script>
+   <body onLoad='runWebApp()'>
+   </body>
+</html>

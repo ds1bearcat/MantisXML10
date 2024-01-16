@@ -1,0 +1,14 @@
+In order to get the java files to compile, the tomcat-juli.jar must be included in order to build the project.
+
+Here are the steps to add this jar file into the project:
+
+1) Go to the top menu bar and click on "Project"
+2) Then click on "Properties"
+3) Select the "Java Build Path"
+4) Click on the "Libraries" tab on the top
+5) Click the "Add External Jars" button on the right
+6) Find the tomcat-juli.jar file on the file system. It should be in the "<tomcat install folder>\bin" directory
+	This should add the tomcat-juli.jar file into the listing box on this screen.
+7) Hit the "Apply" button or the "OK" button to proceed
+
+Now you should be able to build the java files into the class files.

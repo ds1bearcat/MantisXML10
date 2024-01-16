@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE xml>
+<!--CONTROL-MSF_FACILITYHELP-PMT.XML-->
+<ns1:PROMPTERDATA xmlns:ns1="http://appdev.cincom.com/MantisServer" ns1:NAME="CONTROL-MSF_FACILITYHELP">
+  <PROMPTER NAME="CONTROL-MSF_FACILITYHELP">
+    <HEADER>MANTIS Search Facility</HEADER>
+    <LINE>The MANTIS Search Facility (MSF) allows you to search for strings within</LINE>
+    <LINE>MANTIS entities.  MANTIS programs, descriptions, and fields from screens,</LINE>
+    <LINE>internal and external file views, interfaces, TOTAL file views, and prompters</LINE>
+    <LINE>can be searched for certain criteria.</LINE>
+    <LINE></LINE>
+    <LINE>To conduct a search, enter the search criteria and what strings you wish to</LINE>
+    <LINE>search for in the Search String(s) fields.  You can run this program in</LINE>
+    <LINE>Batch MANTIS by running CONTROL:SEARCH_FACILITY by name.</LINE>
+    <LINE></LINE>
+    <LINE>Search Criteria:</LINE>
+    <LINE></LINE>
+    <LINE>   Username:  This is the user that will be searched.  The default is the</LINE>
+    <LINE>              current user.  You can change the username to search another</LINE>
+    <LINE>              user.  Only the MASTER user can specify 'MASTER'.  Also the</LINE>
+    <LINE>              MASTER user can specify an asterisk (*) to search all users.</LINE>
+    <LINE></LINE>
+    <LINE>   Password:  Required if you wish to search a different user.  The MASTER</LINE>
+    <LINE>              user is not required to enter a password for other users or</LINE>
+    <LINE>              for searching all users with an asterisk (*).</LINE>
+    <LINE></LINE>
+    <LINE>  Entity Name:  Enter the name of a specific entity you wish to search.  The</LINE>
+    <LINE>                name can be wildcarded at the end with an asterisk.  For</LINE>
+    <LINE>                example:  CUST* searches all entities beginning with CUST.</LINE>
+    <LINE>                You can enter only an asterisk to search all entity names.</LINE>
+    <LINE></LINE>
+    <LINE>  Entity Type:  The entity type can be one or more different types of</LINE>
+    <LINE>                entities to be searched. The default entity type is Programs</LINE>
+    <LINE>                on the MSF panel. To change or select different entities</LINE>
+    <LINE>                types, enter 6 at the Command Line or press PF6 to display</LINE>
+    <LINE>                an entity type selection screen. Place an "S" next to the</LINE>
+    <LINE>                type(s) of searches you want and press Enter to fill the</LINE>
+    <LINE>                Entity Type field on the MSF panel.</LINE>
+    <LINE></LINE>
+    <LINE>  Search Comments?:  Enter 'Y'es if you want program comments to be searched</LINE>
+    <LINE>                     or 'N'o to exclude comments from the search.</LINE>
+    <LINE></LINE>
+    <LINE>  Search Descriptions?:  Enter 'Y'es if you want entity descriptions to be</LINE>
+    <LINE>                         included in the search or 'N'o to exclude entity</LINE>
+    <LINE>                         descriptions from the search.</LINE>
+    <LINE></LINE>
+    <LINE>  Saved Search:   You can save your search criteria for later use by entering</LINE>
+    <LINE>                  a name (up to 32 characters) and pressing F7.  You can load</LINE>
+    <LINE>                  previously saved searches from a list by pressing F8.  You</LINE>
+    <LINE>                  can delete saved searches from the list by pressing F9.</LINE>
+    <LINE></LINE>
+    <LINE>  Case Sensitive: Entering "Y" indicates that while searching, that case</LINE>
+    <LINE>                  sensitive values will be used in the supplied search</LINE>
+    <LINE>                  criteria. Entering "N" (default) excludes case sensitively</LINE>
+    <LINE>                  from the supplied search criteria.</LINE>
+    <LINE></LINE>
+    <LINE>  Print Results:  Entering "Y" indicates results of the search be routed to</LINE>
+    <LINE>                  your designated printer. Entering "N" (default) results of</LINE>
+    <LINE>                  search will displayed upon your terminal.</LINE>
+    <LINE></LINE>
+    <LINE>Search String(s):</LINE>
+    <LINE></LINE>
+    <LINE>  You have up to 9 lines to enter the strings for which you wish to search.</LINE>
+    <LINE></LINE>
+    <LINE>  Example:  Entering DATE will find all occurrences in entities where the</LINE>
+    <LINE>            string DATE appears.  Note:  this will include strings such as</LINE>
+    <LINE>            UPDATE, etc., so you may wish to qualify your search better.</LINE>
+    <LINE>            For example:  _DATE or :DATE, etc.</LINE>
+    <LINE></LINE>
+    <LINE>Press ENTER to conduct the search.  F3 to exit, F5 to refresh the display,</LINE>
+    <LINE>F6 to present an Entity Type Selection List, F7 to save a search, F8 to load</LINE>
+    <LINE>a saved search, F9 to delete a saved search, F12 to Cancel, F15 for the main</LINE>
+    <LINE>MANTIS menu, and F24 to Logoff MANTIS.  The Cancel key cancels the search.</LINE>
+  </PROMPTER>
+</ns1:PROMPTERDATA>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="no" http-equiv="imagetoolbar"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="css/compat/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mTheme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mLayout.css"/>
+	<!-- Font Awesome Icon Set -->
+  	<link href="css/fontAwesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"></link>
+  	<link rel="stylesheet" type="text/css" href="css/LandingMantis.css"/>
+	<title>MANTIS</title>
+	<script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="js/mantis.base.js"   type="text/javascript"></script>
+	<script src="js/mantis.custom.js" type="text/javascript"></script>
+	<script src="js/mantisMenu.js" type="text/javascript"></script>
+	<script src="js/mantisSlideshow.js" type="text/javascript"></script>
+</head>
+
+<body> <!-- onload="javascript:openScript('Start',790,590)" >-->
+	<header>
+		<div id="manLogo">
+			<div id="mlWrap">
+				<a href="http://mantis.cincom.com" target="_blank">
+					<img id="MantisLogohdr" alt="MANTIS" src="images/CincomMANTIS_hdrLogo.svg" onerror="this.onerror=null; this.src='images/CincomMANTIS_hdrLogo.png'" />
+				</a>
+				<a href="http://www.cincom.com" target="_blank">
+					<img id="CincomLogohdr" alt="Cincom" src="images/Cincom_hdrLogo.svg" onerror="this.onerror=null; this.src='images/Cincom_hdrLogo.png'" />
+				</a>
+			</div>
+		</div>
+		<nav id="mTopMenu" class="mantisMenu fullMenu">
+			<ul>
+				<li class="parent">
+					<a href="#">
+						<i id="featureIcon" class="mmIcon"></i>
+						Features
+					</a>
+					<ul>
+						<li>
+							<a href="#1" onclick="if(!document.addEventListener)window.location.hash = '#mF1'; else $('#manMeat').animate({ scrollLeft: $('#manMeat').width() }, 1000);">
+							IDE</a>
+						</li>
+						<li>
+							<a href="#2" onclick="if(!document.addEventListener)window.location.hash = '#mF2'; else $('#manMeat').animate({ scrollLeft: $('#manMeat').width()*2  }, 1000);">
+							Platforms</a>
+						</li>
+						<li>
+							<a href="#3" onclick="if(!document.addEventListener)window.location.hash = '#mF3'; else $('#manMeat').animate({ scrollLeft: $('#manMeat').width()*3  }, 1000);">
+							Web/UI Technologies</a>
+						</li>
+						<li>
+							<a href="#4" onclick="if(!document.addEventListener)window.location.hash = '#mF4'; else $('#manMeat').animate({ scrollLeft: $('#manMeat').width()*4  }, 1000);">
+							Databases/Interfacing</a>
+						</li>
+						<li class="last">
+							<a href="#5" onclick="if(!document.addEventListener)window.location.hash = '#mF5'; else $('#manMeat').animate({ scrollLeft: $('#manMeat').width()*5  }, 1000);">
+							Language</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent">
+	                <a href="http://demo.cincom.com/MantisXML/Start?XML=CONTROL-XMLStartGolf" target="_blank">
+	                	<i id="demo1Icon" class="mmIcon"></i>
+	                	Demo 1
+	                </a>                
+				</li>
+				<li class="parent">
+					<a href="http://demo.cincom.com/MantisXML/Start?XML=CONTROL-XMLStartEmail" target="_blank">
+						<i id="demo2Icon" class="mmIcon"></i>
+						Demo 2
+					</a>
+				</li>
+				<li class="parent ieStud">
+					<a href="http://mantis.cincom.com/mantisstudio/" target="_blank">
+						<i id="studioIcon" class="mmIcon"></i>
+						Get Mantis Studio Now!
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="manMeat">
+		<div id="manInfo" style="height:100%;">
+			<div id="manFeatures" style="height:100%;">
+				<h1>MANTIS<sup>&reg;</sup></h1>
+				<span>a hybrid application development<br /></span>
+				<span>platform using best of breed<br /></span>
+				<span>technology allowing quick<br /></span>
+				<span>and easy development of<br /></span>
+				<span>business applications.<br /></span>
+			</div>
+			<div id="mF1">
+				<div class="manFeature">
+					<span>MANTIS Studio includes helpful productivity tools such as:</span>
+					<ul>
+						<li>auto code completion 
+							<a href="javascript:void(0)" onclick="$('#LB1').dialog('option','width',701);$('#LB1').dialog('open');">View</a>
+						</li>
+						<li>integrated help 
+							<a href="javascript:void(0)" onclick="$('#LB2').dialog('option','width',361);$('#LB2').dialog('open');">View</a>
+						</li>
+						<li>project and file creation wizards 
+							<a href="javascript:void(0)" onclick="$('#LB3').dialog('option','width',526);$('#LB3').dialog('open');">View</a>
+						</li>
+						<li>an integrated Apache Tomcat server 
+							<a href="javascript:void(0)" onclick="$('#LB4').dialog('option','width',390);$('#LB4').dialog('open');">View</a>
+						</li>
+						<li>code snippets 
+							<a href="javascript:void(0)" onclick="$('#LB5').dialog('option','width',201);$('#LB5').dialog('open');">View</a>
+						</li>
+						<li>a UI web folder view 
+							<a href="javascript:void(0)" onclick="$('#LB6').dialog('option','width',360);$('#LB6').dialog('open');">View</a>
+						</li>
+						<li>an advanced debugger 
+							<a href="javascript:void(0)" onclick="$('#LB7').dialog('option','width',701);$('#LB7').dialog('open');">View</a>
+						</li>
+						<li>automatic builder and packaging wizards for all supported platforms
+						</li>
+						<li>support for major revision control and source code management systems
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="mF2">
+				<div class="manFeature">
+					<h1>Platforms</h1>
+					<span>MANTIS can be developed and run natively and from web on a number of Operating Systems<br /></span>
+					<img id="mF2img1" alt="iOS" src="images/homePage/iOSLogo.png" />
+					<img id="mF2img2" alt="Windows" src="images/homePage/windowsLogo.png"/>
+					<img id="mF2img3" alt="Android" src="images/homePage/AndroidLogo.png" />
+					<img id="mF2img4" alt="OSX" src="images/homePage/XOSLogo.png" />
+					<img id="mF2img5" alt="Unix" src="images/homePage/UNIXLogo.png"/>
+					<img id="mF2img6" alt="Linux" src="images/homePage/linuxLogo.png" />
+					<img id="mF2img7" alt="zOS" src="images/homePage/zOSLogo.png" />
+					<img id="mF2img8" alt="Chrome OS" src="images/homePage/ChromeLogo.png"/>
+					<img id="mF2img9" alt="zVSE" src="images/homePage/zVSELogo.png" />
+				</div>
+			</div>
+			<div id="mF3">
+				<div class="manFeature">
+					<h1>Web/UI Technologies</h1>
+					<span>MANTIS employs a variety of open web technologies to create rich portable interfaces:<br /></span>
+					<ul>
+						<li>HTML/HTML5</li>
+						<li>CSS/CSS 3</li>
+						<li>Javascript, jQuery</li>
+						<li>XML, XSL/XSLT</li>
+						<li>Compression Tools</li>
+					</ul>
+					<div style="text-align:center;">
+						<img id="mF3img1" alt="HTML5" src="images/homePage/HTML5.png" />
+						<img id="mF3img2" alt="CSS3" src="images/homePage/CSS3.png" />
+						<img id="mF3img3" alt="XML" src="images/homePage/XML.png" />
+						<img id="mF3img4" alt="jQuery" src="images/homePage/jQuery.png" style="padding-top:25;"/>
+					</div>
+				</div>
+			</div>
+			<div id="mF4">
+				<div class="manFeature">
+					<h1>Databases/Interfacing</h1>
+					<span>
+						As well as supporting many major databases (ODBC, SQL, Supra, 
+						DB2, Oracle) MANTIS includes an Internal File key-based storage 
+						system. MANTIS also makes it easy to interface with other 
+						software products through XML design utilities.
+					</span>
+				</div>
+			</div>
+			<div id="mF5">
+				<div class="manFeature">
+					<h1>Language</h1>
+					<span>The MANTIS programming language is an easy, compact, and 
+					fast executing interpreted and pre-compiled scripting language.
+					<br /></span>
+					<ul>
+						<li>Human Readable</li>
+						<li>Non-verbose</li>
+						<li>Easy Object Manipulation</li>
+						<li>Platform and Hardware Independent</li>
+						<li>Automatic Memory Management</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id="fNavWrap">
+			<nav id="footMenu">
+				<a href="javascript:Start(true);">Login</a>
+				<a href="http://demo.cincom.com/MantisXML/License.html" target="_blank">Documentation</a>
+				<a href="http://demo.cincom.com/MantisXML/License.html" target="_blank">Terms &amp; Agreement</a>
+				<a href="mailto:mantis@cincom.com">Feedback</a>
+			</nav>
+		</div>
+		<div id="crWrap">
+			<div id="copyRight">&copy;2017 Cincom Systems Inc. All Rights Reserved</div>
+		</div>
+	</footer>
+	
+	<!-- popup/lightBox images -->
+	<div id="LB1" class="homeLB"><img alt="auto complete" src="images/homePage/autoComplete.jpg" width="700" height="114"/></div>
+	<div id="LB2" class="homeLB"><img alt="integrated help" src="images/homePage/integratedHelp.jpg" width="360" height="364"/></div>
+	<div id="LB3" class="homeLB"><img alt="creation wizard" src="images/homePage/creationWizard.JPG" width="525" height="500"/></div>
+	<div id="LB4" class="homeLB"><img alt="Apache server" src="images/homePage/apacheServer.jpg" width="389" height="146"/></div>
+	<div id="LB5" class="homeLB"><img alt="snippets" src="images/homePage/snippets.jpg" width="200" height="191"/></div>
+	<div id="LB6" class="homeLB"><img alt="web view" src="images/homePage/webView.jpg" width="359" height="208"/></div>
+	<div id="LB7" class="homeLB"><img alt="mantis studio" src="images/homePage/MantisStudioDataSheet05.jpg" width="700" height="423"/></div>
+	
+	<!-- Home Page JavaScripts -->
+	
+	<script type="text/javascript">
+		var homeShow = function () {
+			
+			mantisMenu('#mTopMenu',{
+				location: 'topCenter', //topLeft,topRight,topCenter
+				submenu: 'ribbon', //dropdown,accordion,ribbon
+				speed: 250, //milliSeconds animation time
+				mobileLoc: 'right', //left,rigt
+				mobileAlways: false, //always mobile size
+				arrows: false //automatically generate navigation arrows
+			});
+			
+			mantisSlides('#manInfo',{
+				direction: 'horizontal', //horizontal,vertical
+				controls: 'arrows', //arrows,none
+				speed: 500, //milliSeconds
+				scrollBar: true, //true,false
+				autoPlay: true, //true,false
+				autoTime: 4500, //milliSeconds
+				hoverPause: true //true,false (also works for clicks)
+			});
+			
+			//dialogs
+			$( ".homeLB" ).dialog({
+		      autoOpen: false,
+		      resizable: false,
+		      open: function() {
+		    	    $('<div class="ui-widget-overlay"></div>').appendTo('body').show();
+		            $('.ui-widget-overlay').bind('click', function() {
+		                $('.ui-dialog-content').dialog('close');
+		            })
+		        },
+		      close: function(ev, ui) {
+		    	  //$('.ui-widget-overlay').hide( function(){ $('.ui-widget-overlay').remove(); }) //animation
+		    	  $('.ui-widget-overlay').remove();
+		      }
+			});
+			
+		};
+		$( document ).ready(homeShow);
+		$( document ).ajaxComplete(homeShow);
+	</script>
+</body>
+</html>

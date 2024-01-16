@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:FORMDATA NAME="CONTROL-XMLSTART" xmlns:ns1="http://appdev.cincom.com/MantisServer">
+    <CONTROL-XMLSTART>
+        <CLEARANCE>MASTER</CLEARANCE>
+        <NAME>MASTER</NAME>
+        <PARAMETER>CONTROL:VSD_DESIGNER_MAIN</PARAMETER>
+        <MODE/>
+        <URL/>
+        <SCREEN/>
+    </CONTROL-XMLSTART>
+    <CONTROL-RESERVED_INFO>
+        <INPUT_LINE/>
+        <KEYSIM/>
+    </CONTROL-RESERVED_INFO>
+</ns1:FORMDATA>

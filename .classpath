@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.1.13"/>
+	<classpathentry kind="lib" path="C:/eclipse/apache/apache-tomcat-10.1.13/bin/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axiom-api-1.2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axiom-dom-1.2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axiom-impl-1.2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axis2-kernel-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axis2-adb-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axis2-transport-http-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/axis2-transport-local-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/xerces-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/pdfbox-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/jtidy.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/fop.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/xmlgraphics-commons-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daniel.shawhan/eclipse-workspace/MantisXML10/src/main/webapp/WEB-INF/lib/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/dropins/xdoclet-1.2.1"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

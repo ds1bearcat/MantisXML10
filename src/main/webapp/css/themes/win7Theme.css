@@ -1,0 +1,592 @@
+/* =================================================================================
+Windows 7 - Basic Theme
+==================================================================================*/
+body{
+	font: normal 500 12px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color:#3a3a3a;
+	background:#fff;
+}
+#mainColumn{
+	font: normal 500 12px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+#leftColumn{
+	font: normal 500 12px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+#rightColumn{
+	font: normal 500 12px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+footer{
+	font: normal 500 12px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h1 {
+  font: normal normal normal 2.25em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h2 {
+  font: normal normal normal 1.75em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h3 {
+  font: normal normal normal 1.5em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h4 {
+  font: normal normal normal 1.17em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* no style for input-file in firefox */
+button, .button, button:focus, .button:focus, .ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default,
+select, .manDropdown{
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;  
+	border: 1px solid #707070;
+	background-color: #F0F0F0;
+	background-image: none;
+	/*-webkit-linear-gradient(top, rgb(235, 235, 235) 0%, rgb(245, 245, 245) 48%, rgb(226, 226, 226) 51%);*/
+	border-radius: 4px;
+	/*box-shadow: 0 1px 2px #000;*/
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+} 
+::-webkit-file-upload-button {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;  
+	border: 1px solid #707070;
+	background-color: #F0F0F0;
+	background-image: none;
+	/*-webkit-linear-gradient(top, rgb(235, 235, 235) 0%, rgb(245, 245, 245) 48%, rgb(226, 226, 226) 51%);*/
+	border-radius: 4px;
+	/*box-shadow: 0 1px 2px #000;*/
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+}
+::-ms-browse {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;  
+	border: 1px solid #707070;
+	background-color: #F0F0F0;
+	background-image: none;
+	/*-webkit-linear-gradient(top, rgb(235, 235, 235) 0%, rgb(245, 245, 245) 48%, rgb(226, 226, 226) 51%);*/
+	border-radius: 4px;
+	/*box-shadow: 0 1px 2px #000;*/
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+}
+button:hover, .button:hover, .ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content
+.ui-state-focus, .ui-widget-header .ui-state-focus, 
+select:hover, .manDropdown:hover {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;
+	background-color: #EAF6FD;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+::-webkit-file-upload-button:hover {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;
+	background-color: #EAF6FD;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+::-ms-browse:hover {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	cursor:pointer;
+	background-color: #EAF6FD;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+button:active, .button:active, .ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active, 
+::-webkit-file-upload-button:active, input[type=file]:active,
+select:active, .manDropdown:active {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	background-color: #e5f4fc;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #98d1ef, 0 0 3px #68b3db;
+}
+::-webkit-file-upload-button:active {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	background-color: #e5f4fc;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #98d1ef, 0 0 3px #68b3db;
+}
+::-ms-browse:active {
+	font: normal 500 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	background-color: #e5f4fc;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #98d1ef, 0 0 3px #68b3db;
+}
+button, .button, button:hover, .button:hover, button:active, .button:active, button:focus, .button:focus{
+	font-size: 1.1em;
+	padding: .2em 1.2em;
+}
+::-webkit-file-upload-button, ::-webkit-file-upload-button:hover, ::-webkit-file-upload-button:active{
+	font-size: 1.1em;
+	padding: .2em 1.2em;
+}
+::-ms-browse, ::-ms-browse:hover, ::-ms-browse:active{
+	font-size: 1.1em;
+	padding: .2em 1.2em;
+}
+select, .manDropdown, select:hover, .manDropdown:hover, select:active, .manDropdown:active{
+	font-size: 1.1em;
+	padding: .1 1.2em 0 0;
+}
+
+.ui-button, .ui-button:link, .ui-button:visited, .ui-button:hover, .ui-button:active {
+	padding: .2em 1em;
+}
+
+.ui-accordion .ui-accordion-header {
+	padding: 3px .5em 4px 2em;
+	margin:0;
+	border-radius:0;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	padding: 2px 1em;
+}
+.ui-tabs-nav, .ui-tabs .ui-tabs-nav li {
+	border-radius: 0;
+	border-radius: 0;
+	margin:0;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active{
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #3C7FB1;
+	box-shadow: none;
+}
+input{
+	border-radius: 3px;
+}
+input[type=text]:active, input[type=text]:focus, input[type=number]{
+	box-shadow:inset 0 .1em .1em 0 #777;
+}
+fieldset{
+	background-color:#f0f0f0;
+	border-radius: 3px;
+}
+.mTable th{
+	background-color:#f0f0f0;
+	color: #111111;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	font: normal 400 1.2em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	padding:.1em .3em;
+}
+.mTable td{
+	color: #111111;
+	border-left:none;
+	border-right:none;
+	font: normal 400 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	padding:.1em .3em;
+}
+a{
+	font-size:1.1em;
+	color:#111111;
+}
+/* change add label after checkbox which has class .checkLabel*/
+input[type=checkbox] {
+	visibility: hidden;
+}
+input[type=checkbox] {
+	width:16px;
+	margin-left:-18px;
+	position: relative;
+}
+input[type=checkbox] + .checkLabel {
+	cursor: pointer;
+	position: relative;
+	width: 11px;
+	height: 11px;
+	margin-right:6px;
+	display:inline-block;
+	box-shadow: #aaa 0 0 1px 1px;
+	outline: 1px solid #aaa;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	background: -webkit-linear-gradient(top left, #aaa, #eee 60%);
+	background: -moz-linear-gradient(top left, #aaa, #eee 60%);
+	background: -o-linear-gradient(top left, #aaa, #eee 60%);
+	background: -ms-linear-gradient(top left, #aaa, #eee 60%);
+	background: linear-gradient(top left, #aaa, #eee 60%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#eee',GradientType=0 );
+}
+input[type=checkbox] + .checkLabel:active,input[type=checkbox] + .checkLabel:focus {
+	cursor: pointer;
+	width: 11px;
+	height: 11px;
+	box-shadow: #3C7FB1 0 0 0px 1px;
+	outline: 1px solid #3C7FB1;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	background: -webkit-linear-gradient(top left, #BEE6FD, #A7D9F5 60%);
+	background: -moz-linear-gradient(top left, #aaa, #eee 60%);
+	background: -o-linear-gradient(top left, #aaa, #eee 60%);
+	background: -ms-linear-gradient(top left, #aaa, #eee 60%);
+	background: linear-gradient(top left, #aaa, #eee 60%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#eee',GradientType=0 );
+}
+input[type=checkbox] + .checkLabel:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 1px;
+	left: 0px;
+	border: 2px solid darkblue;
+	border-top: none;
+	border-right: none;
+
+	transform: rotate(-55deg);
+}
+input[type=checkbox] + .checkLabel:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+input[type=checkbox]:checked + .checkLabel:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+/* change add label after radio which has class .radioLabel*/
+input[type=radio] {
+	visibility: hidden;
+}
+input[type=radio] {
+	width: 16px;	
+	margin-left:-18px;
+	position: relative;
+}
+input[type=radio] + .radioLabel {
+	cursor: pointer;
+	position: relative;
+	width: 11px;
+	height: 11px;
+	margin:0 6px;
+	display:inline-block;
+	box-shadow: #777 0 0 1px 1px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	background: -webkit-linear-gradient(top left, #aaa, #eee 60%);
+	background: -moz-linear-gradient(top left, #aaa, #eee 60%);
+	background: -o-linear-gradient(top left, #aaa, #eee 60%);
+	background: -ms-linear-gradient(top left, #aaa, #eee 60%);
+	background: linear-gradient(top left, #aaa, #eee 60%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#eee',GradientType=0 );
+}
+input[type=radio]:checked + .radioLabel, input[type=radio] + .radioLabel:active,input[type=radio] + .radioLabel:focus {
+	cursor: pointer;
+	box-shadow: #3C7FB1 0 0 0px 1px;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	background: -webkit-linear-gradient(top left, #BEE6FD, #A7D9F5 60%);
+	background: -moz-linear-gradient(top left, #aaa, #eee 60%);
+	background: -o-linear-gradient(top left, #aaa, #eee 60%);
+	background: -ms-linear-gradient(top left, #aaa, #eee 60%);
+	background: linear-gradient(top left, #aaa, #eee 60%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#eee',GradientType=0 );
+}
+input[type=radio] + .radioLabel:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	background: -webkit-radial-gradient(#f0f0f0, #0da0f3 60%,#111);
+	background: -moz-radial-gradient(#f0f0f0, #0da0f3 60%,#111);
+	background: -o-radial-gradient(#f0f0f0, #0da0f3 60%,#111);
+	background: -ms-radial-gradient(#f0f0f0, #0da0f3 60%,#111);
+	background: radial-gradient(#f0f0f0, #0da0f3 60%,#111);
+	top: 1px;
+	left: 1px;
+	border: 0px solid darkblue;
+	border-radius: 50px;
+}
+input[type=radio] + .radioLabel:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+input[type=radio]:checked + .radioLabel:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+/* Range Slider styling */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  padding-left:5px;
+  width: 200px; /* Specific width is required for Firefox. */
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #666;
+  height: 20px;
+  width: 10px;
+  border-radius: 2px;
+  background: #eee;
+  cursor: pointer;
+  margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+}
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+  border: 1px solid #666;
+  height: 20px;
+  width: 10px;
+  border-radius: 2px;
+  background: #eee;
+  cursor: pointer;
+}
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #DDD;
+  border: 1px solid #666;
+  height: 20px;
+  width: 10px;
+  border-radius: 2px;
+  background: #eee;
+  cursor: pointer;
+}
+input[type=range]:hover::-webkit-slider-thumb, input[type=range]:focus::-webkit-slider-thumb{
+  background-color: #EAF6FD;
+  border: 1px solid #3C7FB1;
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+/* All the same stuff for Firefox */
+input[type=range]:hover::-moz-range-thumb,input[type=range]:focus::-moz-range-thumb {
+  background-color: #EAF6FD;
+  border: 1px solid #3C7FB1;
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+/* All the same stuff for IE */
+input[type=range]:hover::-ms-thumb,input[type=range]:focus::-ms-thumb {
+  background-color: #EAF6FD;
+  border: 1px solid #3C7FB1;
+  box-shadow: inset 0 1px 2px #fff, inset 0 -0.7em #BEE6FD, 0 0 3px #A7D9F5;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: inset 0.5px 1px 1px #aaa;
+  background: #eee;
+  border-radius: 0.3px;
+  border: 0.3px solid #666;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #eee;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: inset 0.5px 1px 1px #aaa;
+  background: #eee;
+  border-radius: 0.3px;
+  border: 0.3px solid #666;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 12px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #eee;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: inset 0.5px 1px 1px #aaa;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #eee;
+}
+input[type=range]::-ms-fill-upper {
+  background: #eee;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: inset 0.5px 1px 1px #aaa;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #eee;
+}
+
+/* Nav and/or Header Menu */
+/* JS to reset icons, move icons to left*/
+header {
+	font: normal 400 1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	background-image: none;
+	box-shadow: 0 3px 4px #333;
+	height:31px;
+}
+nav {
+	font: normal 400 1.1em 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	color: #111111;
+	background-color: #eef6fd;
+	background-image: none;
+	border: 1px solid #ddd;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.25em #dce6f5, 0 0 3px #fff;
+}
+nav li a {
+	border-left: none;
+	border-right: none;
+	color: #444;
+	text-decoration: none;
+	text-shadow: none;
+}
+.fullMenu {
+	height:32px;
+	padding-top:1px;
+}
+.fullMenu li a {
+	padding:4px 15px;
+}
+/* Mini Menu */
+.miniMenu {
+	background-color: #eef6fd;
+	background-image: none;
+	border: 1px solid #ddd;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.25em #dce6f5, 0 0 3px #fff;
+	height: 32px;
+}
+.miniMenu a {
+	color: #111111;
+}
+.miniMenu a:hover {
+	text-decoration:none;
+	background-color: #eef6fd;
+	color:#111;
+	background-image: none;
+	border: 1px solid #7da2ce;
+	border-radius:2px;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.05em #dce6f5, 0 0 3px #fff;
+}
+.miniMenu a:active {
+	text-decoration:none;
+	background-color: #eef6fd;
+	color:#111;
+	background-image: none;
+	border: 1px solid #7da2ce;
+	border-radius:2px;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.05em #dce6f5, 0 0 3px #fff;
+}
+.miniMenu ul ul {
+	background-color:#f0f0f0;
+	border:0px;
+	border-top:2px solid #fff;
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff;
+	box-shadow: 2px 2px 2px 0px #555;
+}
+.miniMenu ul ul a {
+	color: #111;
+	text-shadow: none;
+}
+.miniMenu ul ul a:hover {
+	text-decoration:none;
+	background-color: #eef6fd;
+	color:#111;
+	background-image: none;
+	border: 1px solid #7da2ce;
+	border-radius:2px;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.05em #dce6f5, 0 0 3px #fff;
+}
+.miniMenu .second li {
+	background-color: #ffffff;
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+}
+.miniMenu li a {
+	border-left: 0;
+	border-bottom: 0;
+}
+.miniMenu .second ul {
+	color:#111;
+}
+.pagepush {
+	display: none;
+	background: rgba(235, 235, 235,0.9);
+	height: 100%;
+	box-shadow: none;
+	border-left:1px solid #dedede;
+}
+
+nav ul ul, .fullMenu .second ul {
+	border-radius:1px;
+	background-image:none;
+	background-color:#f0f0f0;
+	border:0px;
+	border-top:2px solid #fff;
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff;
+	box-shadow: 2px 2px 2px 0px #555;
+}
+nav .second li {
+	background-image:none;
+	background-color:#f0f0f0;
+	border:0px;
+}
+.fullMenu li:hover, nav ul ul a:hover{
+	background-color: #eef6fd;
+	color:#111;
+	background-image: none;
+	border: 1px solid #7da2ce;
+	border-radius:2px;
+	box-shadow: inset 0 1px 2px #fff, inset 0 -1.05em #dce6f5, 0 0 3px #fff;
+}
+.fullMenu ul li:hover {
+	border-left:0px;
+	border-right:0px;
+}
+nav ul ul li:first-child a {
+	border-left: 1px solid #eee;
+}
+nav ul ul li a {
+	border-left: 1px solid #eee;
+}

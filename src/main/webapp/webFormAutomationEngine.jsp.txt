@@ -1,0 +1,661 @@
+<%
+/**
+ * Copyright 2006-2014 Cincom Systems, Inc.
+ * All Rights Reserved.
+ *
+ * WebForm Automation Engine
+ *
+ * Version 1.0 by Jason Ertel on July 14, 2006
+ * Version 1.1 by Jason Ertel on July 31, 2006
+ *
+ * This program automates repeated form submission, using
+ * an external file located in the root web server folder.  This external
+ * script file contains the initial, fully-qualified URL on the first line, 
+ * followed by additional lines of scripting, where each additional line 
+ * corresponds to a form submission of the previous URL's response.  An 
+ * example of a script line looks like this:
+ * 
+ * formABC:input1=Test;inputXyz=Test2;SubmitButton=Submit
+ *
+ * or
+ *
+ * formABC:input1=Test;inputXyz=Test2;AccountNumber={acctnum}
+ * 
+ * or
+ * 
+ * 0:input1=Test;3=*OMIT*;newInputFoo=bar
+ *
+ * The only input required for this JSP is a query string parameter
+ * 'scriptfile'.  The value of this parameter must reference a 
+ * text file that follows the syntax defined in this comment.
+ *
+ * Example: http://myserver.com/webFormAutomationEngine.jsp?scriptfile=test.scr
+ *
+ * This script file must have a .scr extension and must exist inside the
+ * WEB-INF folder of this JSP's web archive (WAR).  The WAR must be exploded.
+ * The scriptfile value must not contain two consecutive periods (..) or 
+ * end with a period. The following examples are all identical in that they 
+ * will reference the same WEB-INF/test.scr script file:
+ *
+ * Example 1: http://myserver.com/webFormAutomationEngine.jsp?scriptfile=test.scr
+ * Example 2: http://myserver.com/webFormAutomationEngine.jsp?scriptfile=/test
+ * Example 3: http://myserver.com/webFormAutomationEngine.jsp?scriptfile=\test.scr
+ * 
+ * Note 1: if any of the returned pages from the remote server contain
+ * a <BASE HREF=...> element, then the browser may be unable to include
+ * CSS and Script files that may be referenced from within the page.
+ * 
+ * Note 2: This script is sensitive to extra spaces between < and > 
+ * characters.  Example, "<form" is acceptable, but "< form" is not.
+ *
+ * Note 3: Specifying *OMIT* as a value for any of the inputs will result
+ * in that input not being submitted to the server, even if it came as
+ * a default input from the original form response.
+ *
+ * Note 4: Each type of element, such as form, input, select, etc. should
+ * have a name or ID defined on the form response.  If neither is specified,
+ * the element is assigned a unique number, where the numbering starts at
+ * 0 and increases for each additional element of that same type.  
+ * Therefore, it is always possible to reference the forms or elements.
+ *
+ * Note 5: This automation engine will provide the best results and user
+ * experience when the initial URL from the external script file refers
+ * to a URL on the same server as this JSP.  This is due to the use
+ * of cookies and the security restrictions therein.
+ *
+ * Note 6: Specifying strings contained in curly brackets, ex: {myvar} will
+ * allow input parameters to this JSP to be substituted into the script.
+ * Continuing with this example, suppose the URL to this JSP was as follows:
+ * http://acme.com/webFormAutomationEngine.jsp?scriptfile=myscript.scr&myvar=123
+ * then if a script line contained "accountnumber={myvar}", the form for
+ * that script will be submitted as "accountnumber=123". Also, these
+ * substitution values can be made for the key as well as the value.
+ * Finally, multiple substitution variables can be used within the same 
+ * form input field. 
+ * Ex: accountnumber={num1}%3B{num2}
+ *
+ * Note 7: Use caution when attempting to use semi-colons and curly braces
+ * in the script file, as actual values for input fields.  In most cases,
+ * attempting to use these characters will break the script engine.  Use
+ * the HTML encoded values for these characters instead. 
+ * For reference, the following characters are listed with their encodings:
+ * ; = %3B
+ * { = %7B
+ * } = %7D
+ *
+ * Note 8: All script lines, except for the first line, beginning with a 
+ * pound sign # will be ignored.  This is useful for comments.
+ *
+ * Note 9: You can automate direct hyperlink requests by adding a new
+ * script line with the desired hyperlink.  The fully qualified URL is 
+ * required, including the http:// or https://. Value substitution (Note 6)
+ * is supported here as well.  For example, one of the script lines might
+ * resemble the following:
+ * http://acme.com/about.us?myparam={value}
+ * This will cause the script engine to request this URL instead of 
+ * submitting a form.
+ */
+%>
+<%@ page session="false"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.net.*"%>
+<%@ page import="java.util.*"%>
+<%
+
+String SCRIPT_SUFFIX = ".scr";
+
+String SPACE_SUB_STR = "__SYNC_SPACE_SYNC__";
+String LT_SUB_STR = "__SYNC_LT_SYNC__";
+String GT_SUB_STR = "__SYNC_GT_SYNC__";
+String PERCENT_SUB_STR = "__SYNC_PERCENT_SYNC__";
+String EQUALS_SUB_STR = "__SYNC_EQUALS_SYNC__";
+String AMPERSAND_SUB_STR = "__SYNC_AMPERSAND_SYNC__";
+
+String scriptFile = request.getParameter("scriptfile");
+if ((scriptFile == null) || (scriptFile.trim().length() == 0))
+{
+  response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing 'scriptfile' parameter");
+  return;
+}
+
+if (!scriptFile.endsWith(SCRIPT_SUFFIX))
+{
+  scriptFile += SCRIPT_SUFFIX;
+}  
+
+if (scriptFile.indexOf("..") != -1)
+{
+  response.sendError(HttpServletResponse.SC_BAD_REQUEST, "File '" + scriptFile + "' has a prohibited filename");
+  return;
+}
+
+Writer writer = response.getWriter();
+
+BufferedReader br = null;
+String serverUrl = null;
+try
+{
+  String path = getServletContext().getRealPath("/");
+  if (path == null)
+  {
+    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "This JSP may not be invoked from within an unexploded archive");
+    return;
+  }
+  else if (!path.endsWith(File.separator))
+  {
+    path += File.separator;
+  }
+  
+  if (File.separatorChar == '\\')
+  {
+    scriptFile = scriptFile.replace('/', File.separatorChar);
+  }
+  else
+  {
+    scriptFile = scriptFile.replace('\\', File.separatorChar);
+  }
+
+  if (!scriptFile.startsWith(File.separator))
+  {
+    scriptFile = File.separator + scriptFile;
+  }
+  
+  scriptFile = path + "WEB-INF" + scriptFile;
+  br = new BufferedReader(new FileReader(scriptFile));
+  serverUrl = br.readLine();
+  if (serverUrl == null)
+  {
+    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "File '" + scriptFile + "' does not contain any data");
+    return;
+  }
+  
+  String cookie = null;
+
+  // Pass through cookies from browser to backend system
+  //if ("true".equalsIgnoreCase(request.getParameter("passcookies")))
+  //{
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null)
+    {
+      for (int i = 0; i < cookies.length; i++)
+      {
+        if (cookie == null)
+        {
+          cookie = "";
+        }
+        else
+        {
+          cookie += "; ";
+        }
+        cookie += cookies[i].getName() + "=" + cookies[i].getValue();
+      }
+    }
+  //}
+
+  String content = null;
+  HashMap formMap = null;
+  String scriptLine = null;
+  int scriptLineNumber = 1;
+  boolean continueScript = true;
+  while (continueScript)
+  {  
+    scriptLineNumber++;
+    
+    // Parse scriptLine
+    URLConnection conn = null;
+    String method = null;
+    String submissionContent = null;
+    if (scriptLine != null)
+    {
+      int formEndIndex = scriptLine.indexOf(":");
+      if (formEndIndex == -1)
+      {
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "File '" + scriptFile + "' contains an invalid script line: Missing form name (" + scriptLineNumber + ")");
+        return;
+      }
+
+      if (scriptLine != null)
+      {
+        // Check if this scriptline is a direct hyperlink      
+        if (scriptLine.substring(formEndIndex, formEndIndex + 3).equals("://"))
+        {
+          int questionIndex = scriptLine.indexOf("?");
+          if (questionIndex == -1)
+          {
+            serverUrl = scriptLine;
+            submissionContent = null;
+          }
+          else
+          {
+            serverUrl = scriptLine.substring(0, questionIndex);
+            submissionContent = scriptLine.substring(questionIndex + 1);
+          }
+          method = null;
+        }
+        else
+        {
+          String formName = scriptLine.substring(0, formEndIndex).trim();
+          HashMap elementMap = (HashMap)formMap.get(formName);
+          if (elementMap == null)
+          {
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Content at URL '" + serverUrl + "' does not contain a form named '" + formName + "'");
+            return;
+          }
+          method = (String)elementMap.get("form-" + formName + "-method");
+          String action = (String)elementMap.get("form-" + formName + "-action");
+          if (action.indexOf("://") == -1)
+          {
+            int idx = serverUrl.indexOf("://");
+            if (action.charAt(0) == '/')
+            {
+              // Absolute path to requesting server
+              idx = serverUrl.indexOf("/", idx + 3);
+              if (idx == -1)
+              {
+                serverUrl = serverUrl + action;
+              }
+              else
+              {
+                serverUrl = serverUrl.substring(0, idx) + action;
+              }
+            }
+            else
+            {
+              // Relative to requesting URL
+              int idx2 = serverUrl.lastIndexOf("/");
+              if (idx2 > idx + 3)
+              {
+                serverUrl = serverUrl.substring(0, idx2 + 1) + action;
+              }
+              else
+              {
+                serverUrl = serverUrl + "/" + action;
+              }
+            }
+          }
+          else
+          {
+            // Submit to a different server altogether
+            serverUrl = action;
+          }
+
+          // Use the scriptLine values to override the default form values
+          HashMap scriptValueMap = new HashMap();
+          String[] keyValuePairs = scriptLine.substring(formEndIndex + 1).split(";");
+          for (int i = 0; i < keyValuePairs.length; i++)
+          {
+            String[] pair = keyValuePairs[i].split("=");
+            if (pair.length > 0)
+            {
+              String value = "";
+              if (pair.length > 1)
+              {
+                value = pair[1];
+              }
+              scriptValueMap.put(pair[0], value);
+            }
+          }
+
+          // Prepare data for submission
+          StringBuffer sb = new StringBuffer();
+          Iterator iter = elementMap.keySet().iterator();
+          while (iter.hasNext())
+          {
+            String key = (String)iter.next();
+            if (key.endsWith("-value"))
+            {
+              int idx = key.indexOf("-");
+              int idx2 = key.lastIndexOf("-");
+              String name = key.substring(idx + 1, idx2);
+              String value = (String)elementMap.get(key);
+              String scriptValue = (String)scriptValueMap.get(name);
+
+              // Check if the default value should be overriden by script
+              if (scriptValue != null)
+              {
+                value = scriptValue;
+                scriptValueMap.remove(name);
+              }
+
+              if (!value.equalsIgnoreCase("*OMIT*"))
+              {
+                if (sb.length() > 0)
+                {
+                  sb.append("&");
+                }
+
+                sb.append(URLEncoder.encode(name) + "=" + URLEncoder.encode(value));
+              }
+            }
+          }
+          iter = scriptValueMap.keySet().iterator();
+          while (iter.hasNext())
+          {
+            String name = (String)iter.next();
+            String value = (String)scriptValueMap.get(name);
+            if (sb.length() > 0)
+            {
+              sb.append("&");
+            }
+            sb.append(name + "=" + value);          
+          }
+
+          submissionContent = sb.toString();
+        }
+
+        // Perform value substitution with JSP input parameters
+        if (submissionContent != null)
+        {
+          int sidx = submissionContent.indexOf("{");
+          while (sidx != -1)
+          {
+            int sidx2 = submissionContent.indexOf("}", sidx);
+            if (sidx2 != -1)
+            {
+              String substitutionLookupKey = submissionContent.substring(sidx + 1, sidx2);
+              String[] tmpValue = (String[])request.getParameterMap().get(substitutionLookupKey);
+              if ((tmpValue != null) && (tmpValue.length > 0))
+              {
+                submissionContent = submissionContent.substring(0, sidx) + tmpValue[0] + submissionContent.substring(sidx2 + 1);
+                sidx2 = sidx + 1 + tmpValue[0].length() + 1;
+              }
+            }
+            else
+            {
+              break;
+            }
+            sidx = submissionContent.indexOf("{", sidx2);
+          }
+
+          submissionContent = submissionContent.replaceAll("&", AMPERSAND_SUB_STR);
+          submissionContent = submissionContent.replaceAll("=", EQUALS_SUB_STR);
+          submissionContent = submissionContent.replaceAll("%", PERCENT_SUB_STR);
+          submissionContent = URLEncoder.encode(submissionContent);
+          submissionContent = submissionContent.replaceAll(PERCENT_SUB_STR, "%");
+          submissionContent = submissionContent.replaceAll(EQUALS_SUB_STR, "=");
+          submissionContent = submissionContent.replaceAll(AMPERSAND_SUB_STR, "&");
+        }
+      }
+    }
+
+    if ((method != null) && method.trim().equalsIgnoreCase("post"))
+    {
+      // Submit using POST method
+      URL url = new URL(serverUrl);
+      conn = url.openConnection();
+      conn.setDoInput(true);
+      conn.setDoOutput(true);
+      conn.setUseCaches(false);
+      conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+      if (cookie != null)
+      {
+        conn.setRequestProperty("Cookie", cookie);
+      }
+      DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
+      dos.writeBytes(submissionContent);
+      dos.flush();
+      dos.close();
+    }
+    else
+    {
+      if ((submissionContent != null) && (submissionContent.length() > 0))
+      {
+        serverUrl = "?" + submissionContent;
+      }
+
+      // Retrieve content from server
+      URL url = new URL(serverUrl);
+      conn = url.openConnection();
+      if (cookie != null)
+      {
+        conn.setRequestProperty("Cookie", cookie);
+      }
+    }
+
+    // Read response
+    InputStream is = conn.getInputStream();  
+    String tempCookie = conn.getHeaderField("Set-Cookie");
+    if (tempCookie != null)
+    {
+      cookie = tempCookie;
+    }
+    byte[] buf = new byte[1024];  
+    StringBuffer sb = new StringBuffer();  
+    int bytesRead = 1;
+    while (bytesRead > 0)
+    {
+      for (int i = 0; i < buf.length; i++)
+      {
+        buf[i] = 0;
+      }
+      bytesRead = is.read(buf);
+      if (bytesRead > 0)
+      {
+        sb.append(new String(buf, 0, bytesRead, "UTF-8"));
+      }
+    }
+    is.close();
+    content = sb.toString();
+
+    // Read the next line from the script file.  If no more script lines exist,
+    // then this script is finished, and the previous requested page should be
+    // returned to the browser that initiated this JSP request.
+    scriptLine = br.readLine();
+    while ((scriptLine != null) && (scriptLine.trim().equals("") || scriptLine.trim().startsWith("#")))
+    {
+      scriptLine = br.readLine();
+    }
+
+    if (scriptLine != null)
+    {      
+      // Remove commented data from content
+      String parseContent = content;
+      int eleStartIndex = parseContent.indexOf("<!--");
+      while (eleStartIndex != -1)
+      {
+        int eleEndIndex = parseContent.indexOf("-->", eleStartIndex);
+        if (eleEndIndex == -1)
+        {
+          response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Content at URL '" + serverUrl + "' contains unterminated comments");
+          return;
+        }
+        
+        parseContent = parseContent.substring(0, eleStartIndex) + parseContent.substring(eleEndIndex + 3);
+        
+        eleStartIndex = parseContent.indexOf("<!--");
+      }
+      
+      // Substitute space, <, and > characters that fall within quoted strings with
+      // temporary tags, to keep them from interfering with the parsing engine.
+      boolean quotesActive = false;
+      for (int i = 0; i < parseContent.length(); i++)
+      {
+        char c = parseContent.charAt(i);
+        if (c == '\"')
+        {
+          quotesActive = !quotesActive;
+        }
+        
+        if (quotesActive)
+        {
+          switch (c)
+          {
+            case ' ': parseContent = parseContent.substring(0, i) + SPACE_SUB_STR + parseContent.substring(i + 1); 
+                      i += SPACE_SUB_STR.length() - 1;
+                      break;
+            case '<': parseContent = parseContent.substring(0, i) + LT_SUB_STR + parseContent.substring(i + 1); 
+                      i += LT_SUB_STR.length() - 1;
+                      break;
+            case '>': parseContent = parseContent.substring(0, i) + GT_SUB_STR + parseContent.substring(i + 1); 
+                      i += GT_SUB_STR.length() - 1;
+                      break;
+          }
+        }
+      }
+
+      // A script line was found, so now parse out the previously-received page's
+      // form inputs and replace scripted values as appropriate.
+      HashMap elementMap = new HashMap();      
+      HashMap typeMap = new HashMap();
+      formMap = new HashMap();
+      eleStartIndex = parseContent.indexOf("<");
+      while (eleStartIndex != -1)
+      {
+        int eleEndIndex = parseContent.indexOf(">", eleStartIndex);
+        if (eleEndIndex == -1)
+        {
+          break;
+        }
+
+        String element = parseContent.substring(eleStartIndex + 1, eleEndIndex).trim();
+        String[] attributePairs = element.split(" ");
+        if (attributePairs.length > 0)
+        {
+          HashMap attributeMap = new HashMap();
+          String elementType = attributePairs[0].toLowerCase();
+          if (elementType.equals("input") || elementType.equals("select") || elementType.equals("textarea") || elementType.equals("form"))
+          {
+            String elementName = null;
+
+            // Number each element in ascending order of encountering it in the HTML
+            // stream.  This may be overriden by the element's NAME or ID attribute.
+            Integer typeCount = (Integer)typeMap.get(elementType);
+            if (typeCount == null)
+            {
+              typeCount = new Integer(0);              
+            }
+            else
+            {
+              typeCount = new Integer(typeCount.intValue() + 1);
+            }
+            typeMap.put(elementType, typeCount);
+            String elementID = typeCount.toString();
+
+            for (int i = 1; i < attributePairs.length; i++)
+            {
+              String[] keyValuePair = attributePairs[i].split("=");
+              if (keyValuePair.length > 0)
+              {
+                String key = keyValuePair[0];
+                String value = null;
+                if (keyValuePair.length > 1)
+                {
+                  value = keyValuePair[1];
+
+                  // Unsubstitute temporary tags found in values back to space, 
+                  // <, and > characters since these could be needed as form submitted data.
+                  value = value.replaceAll(SPACE_SUB_STR, " ");
+                  value = value.replaceAll(LT_SUB_STR, "<");
+                  value = value.replaceAll(GT_SUB_STR, ">");
+                  if (value.charAt(0) == '\"' || value.charAt(0) == '\'')
+                  {
+                    value = value.substring(1, value.length() - 1);
+                  }
+                }
+
+                attributeMap.put(key.toLowerCase(), value);
+                if (key.equalsIgnoreCase("name"))
+                {
+                  elementName = value;
+                }
+                else if (key.equalsIgnoreCase("id"))
+                {
+                  elementID = value;
+                }
+              }
+            }
+
+            // Use NAME attribute unless it was not given, then use ID instead
+            if (elementName == null)
+            {
+              elementName = elementID;
+            }
+
+            if (elementType.equals("form"))
+            {
+              elementMap = new HashMap();
+              formMap.put(elementName, elementMap);
+            }
+
+            Iterator iter = attributeMap.keySet().iterator();
+            while (iter.hasNext())
+            {
+              String key = (String)iter.next();
+              String value = (String)attributeMap.get(key);
+              elementMap.put(elementType + "-" + (elementName != null ? elementName + "-" : "") + key, value);
+            }
+          }
+        }
+        
+        eleStartIndex = parseContent.indexOf("<", eleEndIndex + 1);
+      }
+    }
+    else
+    {
+      continueScript = false;
+    }
+  }
+
+  // Change the page's Base HREF to match the original server URI.
+  // This is necessary in order for the browser to find the included CSS/JS files.
+  String baseHref = serverUrl;
+  int qmIndex = baseHref.indexOf("?");
+  if (qmIndex != -1)
+  {
+    baseHref = baseHref.substring(0, qmIndex);
+  }
+  int doubleSlashIndex = baseHref.indexOf("//");
+  int lastSlashIndex = baseHref.lastIndexOf("/");
+  if ((lastSlashIndex != -1) && (lastSlashIndex > doubleSlashIndex + 1))
+  {
+    baseHref = baseHref.substring(0, lastSlashIndex);
+  }
+  baseHref = baseHref + "/";
+  content = content.replaceFirst("<head>", "<head><base href='" + baseHref + "'>");
+  
+  if (cookie != null)
+  {
+    response.addHeader("Set-Cookie", cookie);
+    response.setHeader("Cache-Control","no-cache");
+    response.setHeader("Cache-Control","no-store"); //HTTP 1.1
+    response.setHeader("Pragma","no-cache"); //HTTP 1.0
+    response.setDateHeader("Expires", 0); //prevents caching at the proxy server
+  }
+  writer.write(content);
+}
+catch (FileNotFoundException fnfe)
+{
+  response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "File '" + scriptFile + "' not found");
+  return;
+}
+catch (MalformedURLException mue)
+{
+  response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "'" + serverUrl + "' is an invalid URL");
+  return;
+}  
+catch (IOException e)
+{
+  response.sendError(HttpServletResponse.SC_BAD_GATEWAY, "A communication error occured with the remote server at URL '" + serverUrl + "'");
+  return;
+}
+catch (Exception e)
+{
+  response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error while processing the script file '" + scriptFile + "': " + e.getMessage());
+  e.printStackTrace();
+  return;
+}
+finally
+{
+  if (br != null)
+  {
+    try
+    {
+      br.close();
+    }
+    catch (Exception e)
+    {
+      System.out.println("Error while trying to close script file '" + scriptFile + "'");
+    }
+  }
+}
+%>

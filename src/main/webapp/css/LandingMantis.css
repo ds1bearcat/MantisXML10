@@ -1,0 +1,619 @@
+/* =================================================================================
+Custom Single Screen Settings (start with #NAME-OF-SCREEN)
+==================================================================================*/
+
+html, body {
+    height:100%;
+    background-color:#eff4f4;
+    -webkit-font-smoothing: antialiased;
+}
+
+/**********header************/
+header {
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:20;
+}
+#manLogo {
+    width:100%;
+    background-color:#379396;
+    position:absolute;
+    z-index:250;
+    box-shadow: 0 0px 20px #222;
+}
+#mlWrap {
+    min-width:500px;
+    max-width:1020px;
+    margin:auto;
+    padding:10px 0;
+}
+#CincomLogohdr {
+    left:0;
+}
+#MantisLogohdr{
+    float:right;
+    padding:12px 0 0 0;
+}
+#mTopMenu {
+    position:absolute;
+    margin-top:55px;
+    width:100%;
+    background-color:#525959;
+    box-shadow: 0 0px 15px #222;
+    border-left:0px;
+    border-right:0px;
+    height:73px;
+}
+#mTopMenu ul li a {
+    border:none;
+    text-shadow:1px 1px 0px #111;
+    padding:10px 35px;
+}
+#mTopMenu ul ul {
+    z-index:-2;
+    background-color:#ddd;
+    padding-top:0;
+}
+#mTopMenu ul ul li a {
+    color:#111;
+    text-shadow:none;
+    padding-top:15px;
+}
+#mTopMenu ul ul li a:hover {
+    color:#eee;
+    text-shadow:1px 1px 0px #555;
+}
+.mmIcon {
+    display:block;
+    margin:0 auto;
+    height:35px;
+    width:48px;
+}
+#demo1Icon {
+    background:url(../images/homePage/homeMenu.png) 0px -90px;
+}
+#mTopMenu ul li a:hover #demo1Icon{
+    background:url(../images/homePage/homeMenu.png) 0px -135px;;
+}
+#demo2Icon {
+    background:url(../images/homePage/homeMenu.png) 0px -180px;
+}
+#mTopMenu ul li a:hover #demo2Icon {
+    background:url(../images/homePage/homeMenu.png) 0px -225px;
+}
+#featureIcon {
+    width:43px;
+    background:url(../images/homePage/homeMenu.png) 0px 0px;
+}
+#mTopMenu ul li a:hover #featureIcon {
+    background:url(../images/homePage/homeMenu.png) 0px -45px;
+}
+#studioIcon {
+    width:42px;
+    background:url(../images/homePage/homeMenu.png) 0px -270px;
+}
+#mTopMenu ul li a:hover #studioIcon {
+    background:url(../images/homePage/homeMenu.png) 0px -315px;
+}
+
+/**********meat/body*******/
+#manMeat {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+#manFeatures {
+    background:url(../images/homePage/background_repeat2.jpg);
+}
+#manFeatures h1{
+    font-family:ariel,tahoma,sans-serif;
+    font-size:10em;
+    text-shadow:1px 1px 2px #888;
+    margin:0;
+    padding-top:200px;
+}
+#manFeatures h1 sup {
+    font-size:.4em;
+    vertical-align:super;
+}
+#manFeatures span {
+    font-size:2.8em;
+    text-shadow:1px 1px 2px #888;
+}
+.manFeature {
+    text-align:left;
+    width:640px;
+    margin:180px auto 0 auto;
+    font-size:1.4em;
+    color:#525959;
+}
+.manFeature h1 {
+    font-family:ariel,tahoma,sans-serif;
+    font-weight:600;
+    font-size:2.2em;
+    margin:0;
+}
+.manFeature ul {
+    padding-left:25px;
+}
+.manFeature ul li {
+    padding-bottom:10px;
+}
+#mF1 {
+    width:540px;
+    font-size:1.4em;
+}
+#mF1 ul li {
+    padding-bottom:10px;
+}
+#mF2 img{
+    padding-top:30px;
+}
+#mF3 {
+}
+#mF4 {
+}
+#mF5 {
+}
+#mF2img2{
+    padding:20px 40px 0 60px;
+}
+#mF2img5{
+    padding:20px 40px 0 60px;
+}
+#mF2img8{
+    padding:20px 40px 0 60px;
+}
+.homeLB {
+	display:none;
+}
+
+/**********footer*********/
+footer {
+	display:block;
+    bottom:0;
+    position:fixed;
+    width:100%;
+}
+footer nav {
+    background-image:none;
+}
+#fNavWrap {
+    width:100%;
+    background-color:#182121;
+}
+#footMenu {
+    background-color:#182121;
+    min-width:800px;
+    max-width:1020px;
+    margin:auto;
+    padding:10px 0;
+}
+#footMenu a {
+    color:#eee;
+    text-decoration:none;
+    padding:10px 8px;
+    font-weight:600;
+}
+#footMenu a:hover {
+    color:#379396;
+}
+#crWrap {
+    background-color:#777;
+    width:100%;
+}
+#copyRight {
+    font-size:.75em;
+    color:#eee;
+    padding:2px 8px;
+    min-width:800px;
+    max-width:1020px;
+    margin:auto;
+}
+
+/* responsive layout */
+#mTopMenu.miniMenu {
+    height:45px;
+}
+.miniMenu ul ul a {
+    font-size:1.1em;
+}
+.miniMenu .mmIcon {
+    display:inline-block;
+    margin:0;
+}
+/* =================================================================================
+Responsive elements
+==================================================================================*/
+@media screen and (max-width: 640px),screen and (max-height: 700px) {
+    #manFeatures h1 {
+        font-size:8em;
+    }
+    .manFeature {
+        width:400px;
+        font-size:1.2em;
+    }
+    .manFeature h1 {
+        font-size:1.8em;
+    }
+    #mF1 {
+        width:340px;
+        font-size:1.2em;
+    }
+    #manFeatures span {
+        font-size: 2.4em;
+    }
+    #mF2img1{
+        width:85px;
+    }
+    #mF2img2{
+        width:148px;
+        padding:10px 20px 0 30px;
+    }
+    #mF2img3{
+        width:103px;
+    }
+    #mF2img4{
+        width:85px;
+    }
+    #mF2img5{
+        width:148px;
+        padding:10px 20px 0 30px;
+    }
+    #mF2img6{
+        width:103px;
+    }
+    #mF2img7{
+        width:85px;
+    }
+    #mF2img8{
+        width:148px;
+        padding:10px 20px 0 30px;
+    }
+    #mF2img9{
+        width:103px;
+    }
+    #mF3img1{
+        width:130px;
+    }
+    #mF3img2{
+        width:130px;
+    }
+    #mF3img3{
+        width:130px;
+    }
+    #mF3img4{
+        width:262px;
+    }
+    #sALeft {
+        width:40px;
+    }
+    #sARight {
+        width:40px;
+    }
+}
+@media screen and (max-height: 650px) and (min-width: 700px){
+	#mlWrap {
+		min-width:320px;
+		padding: 5px 0;
+	}
+	#mTopMenu {
+		margin-top:35px;
+	}
+	#CincomLogohdr {
+		width:123px;
+	}
+	#MantisLogohdr {
+		width:171px;
+		padding-top:7px;
+	}
+	#sALeft {
+        width:55px;
+    }
+    #sARight {
+        width:55px;
+    }
+    #manFeatures h1 {
+	    padding-top:160px;
+	}
+	#mF3img1{
+	    width:84px;
+	}
+	#mF3img2{
+	    width:84px;
+	}
+	#mF3img3{
+	    width:84px;
+	}
+	#mF3img4{
+	    width:180px;
+	}
+}
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-width: 480px) and (orientation: portrait){
+	header {
+		position:fixed;
+		margin-top:0px;
+	}
+	#mlWrap {
+		min-width:320px;
+		padding: 5px 0;
+	}
+	#mTopMenu {
+		margin-top:35px;
+		height:40px;
+	}
+	#CincomLogohdr {
+		width:123px;
+	}
+	#MantisLogohdr {
+		width:171px;
+		padding-top:7px;
+	}
+	#manFeatures h1 {
+	    font-size:5em;
+	    padding-top:150px;
+	}
+	#manFeatures span {
+	    font-size: 1.8em;
+	}
+	.manFeature {
+	    width:320px;
+	    font-size:1em;
+	    margin-top:140px;
+	}
+	.manFeature h1 {
+	    font-size:1.4em;
+	}
+	#mF1 {
+	    width:300px;
+	    font-size:1em;
+	}
+	#mF2img1{
+	    width:65px;
+	}
+	#mF2img2{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img3{
+	    width:83px;
+	}
+	#mF2img4{
+	    width:65px;
+	}
+	#mF2img5{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img6{
+	    width:83px;
+	}
+	#mF2img7{
+	    width:65px;
+	}
+	#mF2img8{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img9{
+	    width:83px;
+	}
+	#mF3img1{
+	    width:84px;
+	}
+	#mF3img2{
+	    width:84px;
+	}
+	#mF3img3{
+	    width:84px;
+	}
+	#mF3img4{
+	    width:180px;
+	}
+	#sALeft {
+	    width:35px;
+	}
+	#sARight {
+	    width:35px;
+	}
+	nav#footMenu {
+		min-width:320px;
+		padding:5px 0;
+		font-size:.9em;
+	}
+	#footMenu a {
+		padding:5px 2px;
+	}
+}
+/* Mobile Phones Portrait (iphone)*/
+@media screen and (max-width: 321px) and (orientation: portrait){
+	header {
+		position:fixed;
+		margin-top:0px;
+	}
+	#manFeatures h1 {
+	    font-size:4em;
+	    padding-top:100px;
+	}
+	#manFeatures span {
+	    font-size: 1.6em;
+	}
+	.manFeature {
+	    width:320px;
+	    font-size:.9em;
+	    margin-top:110px;
+	}
+	.manFeature h1 {
+	    font-size:1.4em;
+	}
+}
+
+/*  Mobile Phones Landscape */
+@media screen and (max-device-width: 640px) and (orientation: landscape),screen and (max-height: 500px) and (orientation: landscape){
+	#mlWrap {
+		padding: 5px 0;
+	}
+	#mTopMenu {
+		margin-top:35px;
+		height:40px;
+	}
+	#CincomLogohdr {
+		width:123px;
+	}
+	#MantisLogohdr {
+		width:171px;
+		padding-top:7px;
+	}
+	#manFeatures h1 {
+	    font-size:5em;
+	    padding-top:150px;
+	}
+	#manFeatures span {
+	    font-size: 1.8em;
+	}
+	.manFeature {
+	    font-size:1em;
+	    margin-top:140px;
+	}
+	.manFeature h1 {
+	    font-size:1.4em;
+	}
+	#mF1 {
+	    font-size:1em;
+	}
+	#mF2img1{
+	    width:68px;
+	}
+	#mF2img2{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img3{
+	    width:83px;
+	}
+	#mF2img4{
+	    width:68px;
+	}
+	#mF2img5{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img6{
+	    width:83px;
+	}
+	#mF2img7{
+	    width:68px;
+	}
+	#mF2img8{
+	    width:120px;
+	    padding:8px 16px 0 25px;
+	}
+	#mF2img9{
+	    width:83px;
+	}
+	#mF3img1{
+	    width:84px;
+	}
+	#mF3img2{
+	    width:84px;
+	}
+	#mF3img3{
+	    width:84px;
+	}
+	#mF3img4{
+	    width:180px;
+	}
+	#sALeft {
+	    width:35px;
+	}
+	#sARight {
+	    width:35px;
+	}
+	nav#footMenu {
+		padding:5px 0;
+		font-size:.9em;
+	}
+	#footMenu a {
+		padding:5px 2px;
+	}
+}
+/* Mobile Phones LandScape*/
+@media screen and (max-height: 480px) and (orientation: landscape){
+	#CincomLogohdr {
+		display:none;
+	}
+	#MantisLogohdr {
+		float:left;
+		padding-bottom:10px;
+	}
+	.miniMenu #miniMenuIcon {
+		margin-top:-36px;
+	}
+	#manFeatures h1 {
+	    padding-top:50px;
+	}
+	#manFeatures span {
+	} 
+	.manFeature {
+	    margin-top:60px;
+	}
+	#mTopMenu.miniMenu {
+		z-index:260;
+		background:none;
+		border:0px;
+		box-shadow:none;
+	}
+}
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-height: 1300px){
+  body, html, #manApp {
+  	font-size:16px;
+  }
+  #mlWrap {
+		padding: 15px 0;
+	}
+	#mTopMenu {
+		margin-top:65px;
+		height:78px;
+	}
+	#manFeatures h1 {
+	    padding-top:250px;
+	}
+	.manFeature {
+	    margin-top:240px;
+	}
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+  /* some CSS here */
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  /* some CSS here */
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../css/fonts/fontawesome-webfont.eot?v=4.0.1');
+  src: url('../css/fonts/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-reorder:before {
+  content: "\f0c9";
+}

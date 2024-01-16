@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>YourMantisWebApplicationName</display-name>
+    <description>MANTIS-based application.</description>
+    <servlet>
+        <servlet-name>Start</servlet-name>
+        <servlet-class>com.cincom.MantisWeb.Start</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Resume</servlet-name>
+        <servlet-class>com.cincom.MantisWeb.Resume</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Prompter</servlet-name>
+        <servlet-class>com.cincom.MantisWeb.Prompter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/Start</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Resume</servlet-name>
+        <url-pattern>/Resume</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Prompter</servlet-name>
+        <url-pattern>/Prompter</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <filter-name>CSRFPreventionFilter</filter-name>
+        <filter-class>
+			com.cincom.MantisWeb.MantisCsrfPreventionFilter
+		</filter-class>
+        <init-param>
+            <param-name>entryPoints</param-name>
+            <param-value>/index.jsp,/start.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>nonceCacheSize</param-name>
+            <param-value>100</param-value>
+        </init-param>
+        <init-param>
+            <param-name>denyStatus</param-name>
+            <param-value>403</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CSRFPreventionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+</web-app>

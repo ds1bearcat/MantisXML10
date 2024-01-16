@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CONTROL-S_D_HSCALE-INC.XSL-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" indent="yes"/>
+<xsl:template match="CONTROL-S_D_HSCALE">
+<table align="center"><tbody>
+<tr><td>
+<span>&#160;</span>
+<span class="white">...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+..100....+...11....+...12....+...13....+...14....+...15....+...16....+...17....+...18....+...19....+..200....+...21....+...22....+...23....+
+</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+</tbody></table></xsl:template></xsl:stylesheet>

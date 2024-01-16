@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CONTROL-SIGN_ON-INC.XSL-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" indent="yes"/>
+<xsl:template match="CONTROL-SIGN_ON">
+<table align="center"><tbody>
+<tr><td>
+<span>&#160;</span>
+<span class="screenid">SIG001</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<!--<span class="white">M</span>
+<span>&#160;&#160;</span>
+<span class="white">A</span>
+<span>&#160;&#160;</span>
+<span class="white">N</span>
+<span>&#160;&#160;</span>
+<span class="white">T</span>
+<span>&#160;&#160;</span>
+<span class="white">I</span>
+<span>&#160;&#160;</span>
+<span class="white">S</span>-->
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">*****</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">*****</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">(C) Cincom Systems, Inc. 2004-2013</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">********</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">********</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">All Rights Reserved</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">**********</span>
+<span>&#160;&#160;&#160;&#160;</span>
+<span class="white">**********</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">***********</span>
+<span>&#160;&#160;&#160;</span>
+<span class="white">***********</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">Use of this software is governed</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************</span>
+<span>&#160;&#160;</span>
+<span class="white">************</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">by a license agreement. This software</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************* *************</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">contains confidential and proprietary</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************* *************</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">information of Cincom Systems Inc.</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<xsl:choose><xsl:when test="VERSION/@PRO='N'">
+<input size="27" value="" name="VERSION" maxlength="27" onChange="modified(this,'CONTROL:SIGN_ON-VERSION');">
+<xsl:attribute name="value"><xsl:value-of select="VERSION"/>
+</xsl:attribute></input></xsl:when>
+<xsl:otherwise>
+<span class="white"><xsl:apply-templates select="VERSION" mode="ControlWhitespace"/></span>
+</xsl:otherwise></xsl:choose>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">which is protected by copyright,</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************* *************</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">trade secret, and trade mark law.</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************* *************</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">************ ************</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">*********** ***********</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">Username :</span>
+<span>&#160;</span>
+<xsl:choose><xsl:when test="SIGNNAME/@PRO='N'">
+<input size="16" value="" name="SIGNNAME" maxlength="16" onChange="modified(this,'CONTROL:SIGN_ON-SIGNNAME');">
+<xsl:attribute name="value"><xsl:value-of select="SIGNNAME"/>
+</xsl:attribute></input></xsl:when>
+<xsl:otherwise>
+<span class="white"><xsl:apply-templates select="SIGNNAME" mode="ControlWhitespace"/></span>
+</xsl:otherwise></xsl:choose>
+<span>&#160;</span>
+<span class="white">:</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">********** **********</span>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">Password :</span>
+<span>&#160;</span>
+<xsl:choose><xsl:when test="SIGNPASS/@PRO='N'">
+<input type="password" size="16" value="" name="SIGNPASS" maxlength="16" onChange="modified(this,'CONTROL:SIGN_ON-SIGNPASS');">
+<xsl:attribute name="value"><xsl:value-of select="SIGNPASS"/>
+</xsl:attribute></input></xsl:when></xsl:choose>
+<span>&#160;</span>
+<span class="white">:</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">******** ********</span>
+</td></tr>
+<tr><td>
+<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+<span class="white">***** *****</span>
+<span>&#160;&#160;&#160;&#160;</span>
+<xsl:choose><xsl:when test="NOTE/@PRO='N'">
+<input size="51" value="" name="NOTE" maxlength="51" onChange="modified(this,'CONTROL:SIGN_ON-NOTE');">
+<xsl:attribute name="value"><xsl:value-of select="NOTE"/>
+</xsl:attribute></input></xsl:when>
+<xsl:otherwise>
+<span class="message"><xsl:apply-templates select="NOTE" mode="ControlWhitespace"/></span>
+</xsl:otherwise></xsl:choose>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+<xsl:choose><xsl:when test="SETPRAY/@PRO='N'">
+<input size="78" value="" name="SETPRAY" maxlength="78" onChange="modified(this,'CONTROL:SIGN_ON-SETPRAY');">
+<xsl:attribute name="value"><xsl:value-of select="SETPRAY"/>
+</xsl:attribute></input></xsl:when>
+<xsl:otherwise>
+<span class="white"><xsl:apply-templates select="SETPRAY" mode="ControlWhitespace"/></span>
+</xsl:otherwise></xsl:choose>
+</td></tr>
+<tr><td>
+<span>&#160;</span>
+</td></tr>
+</tbody></table></xsl:template></xsl:stylesheet>

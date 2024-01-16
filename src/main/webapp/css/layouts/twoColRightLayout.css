@@ -1,0 +1,1183 @@
+/* Two-Column-Right Layout (right is main div), Mantis Generated Layout */
+
+/* =================================================================================
+Primary Layout Settings Body, Header, Center, Footer
+==================================================================================*/
+html, body {
+	height:100%;
+	width:100%;
+}
+body{
+	/* fix for inner element margins (margin collapsing) */
+	padding:0.1px;
+}
+#leftColumn {
+	display:inline-block;
+	vertical-align:top;
+	min-height:50px;
+	position:absolute;
+	top:46px;
+	bottom:0;
+	background-color:rgba(137, 140, 121, 1);
+	box-shadow: 1px 8px 4px 4px #000;
+	z-index:199;
+	width:254px;
+	border-left:1px solid #222222;
+	margin:0;
+	padding:0;
+}
+#mainColumn {
+	display:inline-block;
+	vertical-align:top;
+	padding-left:20px;
+	margin:0 0px 0 255px;
+}
+#scr_indicator { /* Inner Div Wrapper for SCR elements */
+	width:100%;
+	padding:0;
+	margin:0;
+	float:left;
+}
+footer {
+	display:none;
+}
+
+
+/* =================================================================================
+Header Settings (title bar)
+==================================================================================*/
+header {
+	position:fixed;
+	_position:absolute;
+	max-height:42px;
+	margin:0 0 5px 0;
+	top:0;
+	_top:expression(eval(document.body.scrollTop));
+	left:0;
+	width:100%;
+	z-index:200;
+}
+.spacer {
+	height:50px;
+}
+#mTitle {
+	display:block;
+	position:relative; 
+	float:left;
+	padding-left:8px;
+	top:5px;
+	z-index:300;
+}
+
+/* =================================================================================
+Table elements
+==================================================================================*/
+td {
+    white-space: nowrap; 
+    height: 13px;
+}
+tr {
+}
+
+/* =================================================================================
+App Element Layout Settings
+==================================================================================*/
+.manRow { /* single row elements */
+	margin: 5px auto;
+	padding:5px 0;
+	text-align:left;
+	overflow: visible;
+	white-space:nowrap;
+}
+.manRowHead {
+	display:block;
+	margin:0 auto;
+	text-align:center;
+}
+#ctx_indicator{ /* Widget wrapper (CTX) */
+	display:inline-block;
+}
+.manField { /* label of elements */
+	display:inline-block;
+}
+.manColumns { /* multi-column element wrapper */
+	display:inline-block;
+}
+.manRowWrap { /* multi-row element wrapper */
+	margin:0 auto;
+	padding:0;
+	text-align:left;
+}
+.wrapAgain {
+	display:inline-block;
+	margin: 0 auto;
+	padding:5px;
+}
+.manRowWrap .manRow {
+	margin:1px auto;
+	padding:1px 0;
+}
+.manRowWrap .manRow .manData{
+	padding:0px 1px;
+}
+.manRowsFirst {
+	display:inline-block;
+	white-space:nowrap;
+}
+.manRows { /* second row reset */
+	display:inline-block;
+}
+.manRowsLast {
+	display:inline-block;
+}
+.manRowLabel {
+	display:inline-block;
+	text-align:center;
+}
+
+.manTableWrap { /* matrix/table layout */
+	overflow: auto;
+	white-space:nowrap;
+	margin:10px 0;
+}
+.manTableWrap table {
+	margin:0
+	padding:0;
+}
+.manTableWrap .manField {
+}
+.manTableWrap tr {
+	margin:0;
+	padding:0;
+	cellspacing:0;
+	cellpadding:0;
+}
+.manTableWrap th, .manTableWrap td {
+	margin:0;
+	padding:0;
+	cellspacing:0;
+	cellpadding:0;
+}
+.manTableWrap input {
+	border:0px;
+}
+
+.manSingle {
+	display:inline-block;
+}
+.topHead {
+	display:block;
+	bottom:0;
+}
+/* Firfox expanding fix */
+form:first-child {
+	overflow:hidden;
+}
+#manButtons { /* default Mantis buttons (MANTIS-BUTTONS.xsl) */
+	diplay:block;
+	text-align:left;
+	margin: 0 0 0 325px;
+}
+
+/* =================================================================================
+App Menu Settings (change these as desired)
+==================================================================================*/
+/* top nav full size styles */
+.fullMenu { 
+	height:42px;
+	position:relative; 
+	padding-top:2px;
+	min-width:480px;
+}
+.menuIcon {
+	padding-left:3px;
+}
+nav .fullMenu {
+	display:block; 
+	position:relative;
+	margin:42px;
+}
+/* mantisMenu layout */
+.fullMenu ul { 
+	padding:0; 
+	margin:0; 
+	z-index:200;
+}
+.fullMenu ul:first-child {
+	margin:0; 
+}
+.fullMenu li { 
+	position:relative; 
+	float:left; 
+	list-style-type:none; 
+}
+.fullMenu ul ul:after { 
+	content:"."; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	visibility:hidden; 
+}
+.fullMenu li a { 
+	display:block; 
+	padding:9px 20px; 
+}
+.fullMenu a span { 
+	display:inline-block; 
+	margin-left:5px; 
+}
+.fullMenu ul ul { 
+	display:none; 
+	min-width:100%;
+	position:absolute; 
+	left:-1px;
+	white-space:nowrap;
+	z-index:200;
+	word-wrap:normal;
+}
+.ribbonMenu ul ul { 
+	display:none; 
+	width:100%;
+	position:fixed; 
+	padding-top:5px;
+	white-space:normal;
+}
+.fullMenu ul ul li { 
+	float:none; 
+}
+.ribbonMenu ul ul li { 
+	display:inline-block;
+}
+.fullMenu ul ul a { 
+	padding:5px 10px; 
+}
+.fullMenu .second ul { 
+	display:none;
+	top:0;
+	left:100%;
+	height:100%;
+	white-space:nowrap;
+	overflow:visible;
+	z-index:140;
+}
+.ribbonMenu .second ul { 
+	display:none; 
+	width:100%;
+	top:auto;
+	left:0;
+	height:auto;
+	position:fixed;
+	padding-top:5px;
+	white-space:normal;
+	z-index:250;
+}
+.accordMenu .second ul { 
+	left:0;
+	top:auto;
+}
+.fullMenu .second span {
+	text-align:right;
+}
+.fullMenu .third ul { 
+	display:none;
+	top:0;
+	left:100%;
+	height:100%;
+	white-space:nowrap;
+	z-index:150;
+}
+.fullMenu .third span {
+	text-align:right;
+}
+.fullMenu #ddtopmenu {
+	margin:15px 0px 0px 0px; 
+	padding:5px;
+	min-width:480px;
+	z-index:200;
+}
+
+/* top nav mini size styles */
+.miniMenu{ 
+	height:42px;
+	margin:0 auto 0px; 
+	position:relative; 
+	padding:2px 0 0 5px;
+	z-index:200;
+}
+/* mantisMenu Mini layout */
+.miniMenu #miniMenuIcon {
+	margin:2px 8px;
+	padding:0;
+	position:fixed;
+	height:40px;
+	right:0;
+	text-align:right;
+	cursor:pointer;
+}
+.miniMenu #miniMenuIcon:hover {
+	
+}
+.pagepush {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: auto;
+    min-width:195px;
+    padding: 0 10px 0 0;
+    overflow-y: auto; /* 1 */
+  	-webkit-overflow-scrolling: touch; /* 2 */
+}
+.miniMenu ul { 
+	display:block;
+	padding:0px;
+	margin:0px;
+	display:none; 
+}
+.miniMenu ul:first-child {
+	margin:0; 
+}
+.miniMenu li { 
+	position:relative; 
+	float:none; 
+	/*padding-left:10px;*/
+	width:100%;
+	list-style-type:none; 
+}
+.miniMenu ul:after { 
+	content:"."; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	visibility:hidden; 
+}
+.miniMenu li a { 
+	display:block; 
+	padding:10px 15px 10px 15px; 
+}
+.miniMenu a span { 
+	display:inline-block; 
+	margin-left:5px; 
+}
+.miniMenu ul ul { 
+	display:none; 
+	left:0px;
+	white-space:normal;
+	word-wrap:normal;
+	padding:0;
+	z-index:150;
+}
+.miniMenu ul ul li { 
+	float:none; 
+}
+.miniMenu ul ul a { 
+	padding:5px 10px; 
+}
+.minienu .second ul { 
+	display:none;
+	top:0;
+	left:100%;
+	height:100%;
+	white-space:nowrap;
+	overflow:visible;
+	z-index:140;
+}
+.accordMenu .second ul { 
+	left:0;
+	top:auto;
+}
+.miniMenu .second span {
+	text-align:right;
+}
+.miniMenu .third ul { 
+	display:none;
+	top:0;
+	left:100%;
+	height:100%;
+	white-space:nowrap;
+	z-index:150;
+}
+.miniMenu .third span {
+	text-align:right;
+}
+
+/* Menu Widget Settings */
+.manMenu {
+	min-width:0px;
+	height:38px;
+}
+/* Slide Down */
+.ribbon1Down {
+	height:35px;
+	z-index:-10;
+}
+.ribbon2Down {
+	height:35px;
+	z-index:-10;
+	display:none;
+}
+
+/* =================================================================================
+Button Settings 
+==================================================================================*/
+.button {
+	margin:5px auto;
+	height:auto;
+}
+
+/* =================================================================================
+Checkbox Settings 
+==================================================================================*/
+input[type=checkbox] {
+	margin-right:5px;
+	display:inline-block;
+}
+input[type=checkbox] + label{
+	display:inline-block;
+}
+
+/* =================================================================================
+Checkbox Settings 
+==================================================================================*/
+input[type=radio] {
+	margin-right:3px;
+	display:inline-block;
+}
+input[type=radio] + label{
+	margin-right:8px;
+	display:inline-block;
+}
+
+/* =================================================================================
+Date (fallback) Settings 
+==================================================================================*/
+.manDates + button{
+	height:20px;
+	width:32px;
+	margin-top:-3px;
+}
+.hasDatepicker {
+	width:9em;
+}
+#ui-datepicker-div {
+	z-index: 2010 !important;
+}
+
+/* =================================================================================
+Slider (ie fix) Settings 
+==================================================================================*/
+input[type="range"]{
+	padding:0px;
+	border:0px;
+	vertical-align:middle;
+	width:150px;
+}
+.manSliderB {
+	width:3em;
+	margin-right:1px;
+}
+
+/* =================================================================================
+Spinner (fallback fix) Settings 
+==================================================================================*/
+.ui-spinner-input {
+	margin:1px;
+	width:60px;
+}
+
+/* =================================================================================
+Dropdown Settings 
+==================================================================================*/
+.manDropdown {
+	padding:2px 1px 2px 1px;
+}
+
+/* =================================================================================
+Popup Settings 
+==================================================================================*/
+.popupmiddle {
+	position:absolute;
+	top:260px;
+    left:60px;
+	overflow: auto;
+	z-index:5;
+}
+.popuptop {
+	position:absolute;
+	top:130px;
+    left:20px;
+	overflow: auto;
+	z-index:6;
+}
+.popupright {
+	position:absolute;
+	top:100px;
+    left:420px;
+	overflow: auto;
+	z-index:7;
+}
+.popupover {
+	position:absolute;
+	top:75px;
+    left:10px;
+	overflow: auto;
+	z-index:6;
+}
+
+/* =================================================================================
+Tab Widget Settings
+==================================================================================*/
+.ui-tabs p {
+	white-space:normal;
+	text-align:left;
+}
+
+/* =================================================================================
+Graph/Plot Widget Elements
+==================================================================================*/
+.jqplot-grid-canvas {
+}
+.jqplot-target {
+    position: relative;
+/*    height: 300px;
+    width: 400px;*/
+}
+.jqplot-xaxis {
+    margin-top: 10px;
+}
+.jqplot-x2axis {
+    margin-bottom: 10px;
+}
+.jqplot-yaxis {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.jqplot-y2axis, .jqplot-y3axis, .jqplot-y4axis, .jqplot-y5axis, .jqplot-y6axis, .jqplot-y7axis, .jqplot-y8axis, .jqplot-y9axis, .jqplot-yMidAxis {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*rules applied to all axis tick divs*/
+.jqplot-axis-tick, .jqplot-xaxis-tick, .jqplot-yaxis-tick, .jqplot-x2axis-tick, .jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick, .jqplot-yMidAxis-tick {
+    position: absolute;
+    white-space: pre;
+}
+.jqplot-xaxis-tick {
+    top: 0px;
+    /* initial position untill tick is drawn in proper place */
+    left: 15px;
+/*    padding-top: 10px;*/
+    vertical-align: top;
+}
+.jqplot-x2axis-tick {
+    bottom: 0px;
+    /* initial position untill tick is drawn in proper place */
+    left: 15px;
+/*    padding-bottom: 10px;*/
+    vertical-align: bottom;
+}
+.jqplot-yaxis-tick {
+    right: 0px;
+    /* initial position untill tick is drawn in proper place */
+    top: 15px;
+/*    padding-right: 10px;*/
+    text-align: right;
+}
+.jqplot-yaxis-tick.jqplot-breakTick {
+    right: -20px;
+    margin-right: 0px;
+    padding:1px 5px 1px 5px;
+    /*background-color: white;*/
+    z-index: 2;
+}
+.jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick {
+    left: 0px;
+    /* initial position untill tick is drawn in proper place */
+    top: 15px;
+/*    padding-left: 10px;*/
+/*    padding-right: 15px;*/
+    text-align: left;
+}
+.jqplot-yMidAxis-tick {
+    text-align: center;
+    white-space: nowrap;
+}
+.jqplot-xaxis-label {
+    margin-top: 10px;
+    position: absolute;
+}
+.jqplot-x2axis-label {
+    margin-bottom: 10px;
+    position: absolute;
+}
+.jqplot-yaxis-label {
+    margin-right: 10px;
+/*    text-align: center;*/
+    position: absolute;
+}
+.jqplot-yMidAxis-label {
+    position: absolute;
+}
+.jqplot-y2axis-label, .jqplot-y3axis-label, .jqplot-y4axis-label, .jqplot-y5axis-label, .jqplot-y6axis-label, .jqplot-y7axis-label, .jqplot-y8axis-label, .jqplot-y9axis-label {
+/*    text-align: center;*/
+    margin-left: 10px;
+    position: absolute;
+}
+table.jqplot-table-legend {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+table.jqplot-table-legend, table.jqplot-cursor-legend {
+    position: absolute;
+}
+td.jqplot-table-legend {
+    vertical-align:middle;
+}
+div.jqplot-table-legend-swatch-outline {
+    padding:1px;
+}
+div.jqplot-table-legend-swatch {
+    width:0px;
+    height:0px;
+}
+.jqplot-title {
+    top: 0px;
+    left: 0px;
+    padding-bottom: 0.5em;
+}
+.jqplot-cursor-tooltip {
+    white-space: nowrap;
+    padding: 1px;
+}
+.jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+    white-space: nowrap;
+    padding: 1px;
+}
+.jqplot-point-label {
+    z-index: 2;
+}
+td.jqplot-cursor-legend-swatch {
+    vertical-align: middle;
+    text-align: center;
+}
+div.jqplot-cursor-legend-swatch {
+    width: 1.2em;
+    height: 0.7em;
+}
+.jqplot-error {
+/*   Styles added to the plot target container when there is an error go here.*/
+    text-align: center;
+}
+.jqplot-error-message {
+/*    Styling of the custom error message div goes here.*/
+    position: relative;
+    top: 46%;
+    display: inline-block;
+}
+div.jqplot-bubble-label {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+div.jqplot-noData-container {
+    text-align: center;
+}
+
+/* =================================================================================
+Color Picker Widget (fallback, non-webkit)
+==================================================================================*/
+.jPicker .Icon{
+	display:inline-block;
+	height:24px;
+	position:relative;
+	text-align:left;
+	width:25px;
+}
+.jPicker .Icon span.Color,.jPicker .Icon span.Alpha{
+	display:block;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+.jPicker .Icon span.Image{
+	cursor:pointer;
+	display:block;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+.jPicker.Container{
+	z-index:2010 !important;
+}
+table.jPicker{
+	margin:0;
+	padding:5px;
+	width:545px;
+	z-index:2020;
+	white-space:normal;
+}
+.jPicker .Move{
+	cursor:move;
+	height:12px;
+	padding:0;
+}
+.jPicker .Title{
+	margin:-2px 0 0 0;
+	padding:10px 0 0 0;
+	text-align:center;
+	width:100%;
+}
+.jPicker div.Map{
+	cursor:crosshair;
+	height:260px;
+	margin:0 10px 10px 10px;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	width:260px;
+}
+.jPicker div[class="Map"]{
+	height:256px;
+	width:256px;
+}
+.jPicker div.Bar{
+	cursor:n-resize;
+	height:260px;
+	margin:12px 10px 0 5px;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	width:24px;
+}
+.jPicker div[class="Bar"]{
+	height:256px;
+	width:20px;
+}
+.jPicker .Map .Map1,.jPicker .Map .Map2,.jPicker .Map .Map3,.jPicker .Bar .Map1,.jPicker .Bar .Map2,.jPicker .Bar .Map3,.jPicker .Bar .Map4,.jPicker .Bar .Map5,.jPicker .Bar .Map6{
+	display:block;
+	left:0;
+	position:absolute;
+	top:0;
+}
+.jPicker .Map .Map1,.jPicker .Map .Map2,.jPicker .Map .Map3{
+	height:2596px;
+	width:256px;
+}
+.jPicker .Bar .Map1,.jPicker .Bar .Map2,.jPicker .Bar .Map3,.jPicker .Bar .Map4{
+	height:3896px;
+	width:20px;
+}
+.jPicker .Bar .Map5,.jPicker .Bar .Map6{
+	height:256px;
+	width:20px;
+}
+.jPicker .Map .Arrow{
+	display:block;
+	position:absolute;
+}
+.jPicker .Bar .Arrow{
+	display:block;
+	left:0;
+	position:absolute;
+}
+.jPicker .Preview{
+	padding:5px 0 0 0;
+	text-align:center;
+}
+.jPicker .Preview div{
+	height:62px;
+	margin:0 auto;
+	padding:0;
+	width:62px;
+}
+.jPicker .Preview div span{
+	display:block;
+	height:30px;
+	margin:0 auto;
+	padding:0;
+	width:60px;
+}
+.jPicker .Preview .Current{
+	cursor:pointer;
+}
+.jPicker .Button{
+	text-align:center;
+	padding:0 4px;
+	width:115px;
+	background:none;
+	border:none;
+}
+.jPicker .Button:hover{
+	text-align:center;
+	padding:0 4px;
+	width:115px;
+	background:none;
+	border:none;
+}
+.jPicker .Button input{
+	padding:2px 0;
+	width:100px;
+}
+.jPicker .Button .Ok{
+	margin:12px 0 5px 0;
+}
+.jPicker td{
+	margin:0;
+	padding:0;
+	white-space:normal;
+}
+.jPicker td.Radio{
+	margin:0;
+	padding:0;
+	width:31px;
+}
+.jPicker td.Radio input{
+	margin:0 5px 0 0;
+	padding:0;
+}
+.jPicker td.Text{
+	font-size:12px!important;
+	height:22px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	width:70px;
+}
+.jPicker tr.Hex td.Text{
+	width:100px;
+}
+.jPicker td.Text input{
+	height:19px;
+	margin:0 0 0 5px;
+	text-align:left;
+	width:30px;
+}
+.jPicker td[class="Text"] input{}.jPicker tr.Hex td.Text input.Hex{
+	width:50px;
+}
+.jPicker tr.Hex td.Text input.AHex{
+	width:20px;
+}
+.jPicker .Grid{
+	text-align:center;
+	width:114px;
+	white-space:normal;
+}
+.jPicker .Grid span.QuickColor{
+	cursor:pointer;
+	display:inline-block;
+	height:15px;
+	line-height:15px;
+	margin:0;
+	padding:0;
+	width:19px;
+}
+.jPicker .Grid span[class="QuickColor"]{
+	width:17px;
+}
+#jPicker { 
+	margin: 0px 8px; 
+	text-align: left; 
+	white-space:normal;
+}
+#jPicker ul { 
+	margin: 0px 0px 0px 15px; 
+	padding: 0px; 
+}
+#jPicker ul li { 
+	padding: 2px 0px; 
+}
+#jPicker ul li ul { 
+	margin-bottom: 10px; 
+}
+#jPicker p { 
+	padding: 0px 10px; 
+}
+#jPicker h2.jPicker { 
+	padding: 20px 10px; 
+}
+#jPicker pre { 
+	display: block; 
+	margin: 10px 5px; 
+	padding: 5px; 
+}
+#jPicker span { 
+	text-align: center; 
+}
+#jPicker input { 
+	padding: 2px 5px; 
+}
+#jPicker h2 { 
+	margin: 10px 0px; 
+}
+
+/* =================================================================================
+SlideShow Controls
+==================================================================================*/
+#sALeft {
+	position:absolute;
+	left:0;
+	height:100%;
+	width:64px;
+}
+#sARight {
+	position:absolute;
+	right:0;
+	height:100%;
+	width:65px;
+}
+
+/* =================================================================================
+Legacy Settings (old mantis.css)
+==================================================================================*/
+.white {
+	margin: 5px auto;
+	padding:5px 0;
+}
+.white input {
+	margin: 5px auto;
+}
+.b_white {
+	position: relative;
+	margin:-12px auto 0 10px;
+	width:65px;
+}
+.title {
+    text-align: left;
+}
+.dbgrheader {
+    height: 46px;
+    vertical-align: middle;
+}
+.unibutton {
+    margin: 1px;
+    width: 32pt;
+    text-indent: 0px;
+    padding-top: 0px;
+    position: static;
+    height: 16pt;
+    text-align: center
+}
+.warning {
+    margin-bottom:20px;
+}
+.message {
+    text-align: left
+}
+.dbgrmessage {
+    text-align: center
+}
+.popupmiddle {
+	position:absolute;
+	top:260px;
+    left:60px;
+	overflow: auto;
+	z-index:5;
+}
+.popuptop {
+	position:absolute;
+	top:130px;
+    left:20px;
+	overflow: auto;
+	z-index:6;
+}
+.popupright {
+	position:absolute;
+	top:100px;
+    left:420px;
+	overflow: auto;
+	z-index:7;
+}
+.popupover {
+	position:absolute;
+	top:75px;
+    left:10px;
+	overflow: auto;
+	z-index:6;
+}
+/* =================================================================================
+Ajax Loading Animation
+==================================================================================*/
+#circularG{
+position:absolute;
+top:50%;
+left:50%;
+margin-top:-64px;
+margin-left:-64px;
+z-index:3000;
+width:128px;
+height:128px}
+.circularG{
+position:absolute;
+background-color:#379396;
+width:29px;
+height:29px;
+border-radius:19px;
+animation-name:bounce_circularG;
+animation-duration:0.64s;
+animation-iteration-count:infinite;
+animation-direction:linear;
+}
+#circularG_1{
+left:0;
+top:50px;
+animation-delay:0.24s;
+}
+#circularG_2{
+left:14px;
+top:14px;
+animation-delay:0.32s;
+}
+#circularG_3{
+top:0;
+left:50px;
+animation-delay:0.4s;
+}
+#circularG_4{
+right:14px;
+top:14px;
+animation-delay:0.48s;
+}
+#circularG_5{
+right:0;
+top:50px;
+animation-delay:0.56s;
+}
+#circularG_6{
+right:14px;
+bottom:14px;
+animation-delay:0.64s;
+}
+#circularG_7{
+left:50px;
+bottom:0;
+animation-delay:0.72s;
+}
+#circularG_8{
+left:14px;
+bottom:14px;
+animation-delay:0.8s;
+}
+@keyframes bounce_circularG{
+0%{
+transform:scale(1)}
+100%{
+transform:scale(.3)}
+}
+
+/* =================================================================================
+Some responsive elements
+==================================================================================*/
+/* header fixed scaling */
+@media  (max-width: 55em) {
+	header {
+		position:absolute;
+	}
+	.ribbonMenu ul ul { 
+		position:absolute;
+	}
+	.ribbonMenu .second ul { 
+		position:absolute;
+	}
+	.miniMenu #miniMenuIcon {
+		position:absolute;
+	}
+}
+@media screen and (max-width: 640px),screen and (max-height: 700px) {
+    html, body {
+		font-size:14px;
+	}
+	#manApp a,#manApp a:hover, #manApp a:active,#manApp a:focus {
+		font-size:1.1em;
+	}
+	input, select {
+		padding:4px 2px;
+	}
+}
+@media screen and (max-height: 650px) and (min-width: 700px){
+	
+}
+/* Mobile Phones Portrait (iphone...) */
+@media screen and (max-width: 480px) and (orientation: portrait){	
+	html, body {
+		font-size:14px;
+	}
+	#manApp {
+		overflow-x:auto;
+	}
+	header {
+		position:relative;
+		margin-top:-50px;
+	}
+	#manApp a,#manApp a:hover, #manApp a:active,#manApp a:focus {
+		font-size:1.1em;
+	}
+	input, select {
+		padding:4px 2px;
+	}
+}
+/* Mobile Phones Landscape */
+@media screen and (max-device-width: 640px) and (orientation: landscape),screen and (max-height: 500px) and (orientation: landscape){
+	html, body {
+		font-size:14px;
+	}
+	#manApp a,#manApp a:hover, #manApp a:active,#manApp a:focus {
+		font-size:1.1em;
+	}
+	input, select {
+		padding:4px 2px;
+	}
+}
+/* Tablets Portrait or Landscape */
+@media screen and (min-height: 1300px){
+  html, body {
+		font-size:14px;
+	}
+	#manApp a,#manApp a:hover, #manApp a:active,#manApp a:focus {
+		font-size:1.1em;
+	}
+	input, select {
+		padding:4px 2px;
+	}
+}
+/* =================================================================================
+Platform Scaling with media queries
+==================================================================================*/
+@media screen and (max-width: 650px) {
+	#scr_indicator { /* Inner Div Wrapper for SCR elements */
+		float:none;
+	}
+	#manApp { /* Inner Div Wrapper for SCR elements */
+		margin: 0;
+	}
+	#leftColumn {
+		display:block;
+		min-height:50px;
+		position:relative;
+		top:0px;
+		box-shadow: 1px 1px 4px 4px #000;
+		float:none;
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+	#mainColumn {
+		display:block;
+		padding:20px;
+		margin:0 0 0 0;
+	}
+	#manButtons {
+		padding:0 20px;
+		margin:0;
+	}
+}
+
+/* =================================================================================
+Custom Single Screen Settings (start with #NAME-OF-SCREEN)
+==================================================================================*/

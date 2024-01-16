@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<style>
+a:link			{font:8pt/11pt verdana; color:red}
+a:visited		{font:8pt/11pt verdana; color:#4e4e4e}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MANTIS Server Error occurred</title>
+<script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+<script language="JavaScript1.2" type="text/javascript" src="js/mantis.base.js"></script>
+<script language="JavaScript1.2" type="text/javascript" src="js/mantis.custom.js"></script>
+</head>
+<body onKeyPress="PFcancel(event);">
+<form>
+<input type="hidden" name="PRESS_KEY" value="aKey"/>
+<table width="500" cellpadding="3" cellspacing="5" style="text-align:left;margin-left:10px;">
+  <tr>
+    <td id="tableProps" valign="top" align="left"><img id="pagerrorImg" SRC="pagerror.gif"
+    width="25" height="33"></td>
+    <td id="tableProps2" align="left" valign="middle" width="360"><h1 id="textSection1"
+    style="COLOR: black; FONT: 13pt/15pt verdana"><span id="errorText">The page cannot be displayed</span></h1>
+    </td>
+  </tr>
+  <tr>
+    <td id="tablePropsWidth" width="500" colspan="2" style="white-space:normal;"><font
+    style="COLOR: black; FONT: 8pt/11pt verdana">The page you are looking for is currently
+    unavailable. The Web site might be experiencing technical difficulties, or you may need to
+    adjust your browser settings.  The following message provides details of the problem:</font></td>
+  </tr>
+  <tr>
+   <td id="tablePropsWidth" width="500" colspan="2"><font
+   style="COLOR: red; FONT: 8pt/11pt verdana"><b>MANTIS-ERROR-DETAILS</b></font></td>
+  </tr>
+  <tr>
+    <td id="tablePropsWidth" width="500" colspan="2">
+    <hr style="color:#C0C0C0;" noshade>
+    <div id="LID1" style="COLOR: black; FONT: 8pt/11pt verdana">
+    <p id="LID2">Please try the following (in the order listed):</p>
+    <ul>
+      <li id="instructionsText1">Click/press the Refresh button/key, or try again later.<br>
+      </li>
+
+      <li id="instructionsText2"><a href="Start">Click here</a> to RESTART the application.<br>
+	  </li>
+
+      <li id="instructionsText3"><a href="Resume">Click here</a> to TERMINATE the current session.<br>
+	  </li>
+	</ul>
+	<br>
+	  <input type="button" value="Close this window" onclick="window.close();">
+    </div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,1602 @@
+/* mTheme.css
+*  theme sytles: color, font, shadows, ...
+*/
+header {
+  box-shadow: 1px 1px 4px 4px #000000 ;
+}
+.mShadows {
+  box-shadow: 1px 1px 4px 4px #000000 ;
+}
+.mRounded {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* =================================================================================
+Main Document Themed Elements
+==================================================================================*/
+body {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  background: #fcfcfc left top 100% repeat padding-box scroll none;
+}
+header {
+  background-color: rgba(83, 90, 90, 0.3);
+}
+#manApp {
+  
+}
+footer {
+
+}
+h1 {
+  font: normal normal normal 2.25em Georgia, serif;
+}
+h2 {
+  font: normal normal normal 1.75em Georgia, serif;
+}
+h3 {
+  font: normal normal normal 1.5em Georgia, serif;
+}
+h4 {
+  font: normal normal normal 1.17em Georgia, serif;
+}
+/* =================================================================================
+Legacy settings (Old mantis.css)
+==================================================================================*/
+.screenid {
+  font-size: 9px;
+  color: blue;
+  line-height: 11px;
+  font-family: Arial, Sans-Serif;
+}
+.title {
+  font-weight: bolder;
+  color: #379396;
+  font-style: normal;
+  font-size: 16px;
+  font-family: Helvetica, Arial, 'Lucida Console', sans-serif, Fixedsys, monospace;
+  background-color: transparent;
+}
+.yellow {
+  color: brown;
+}
+.white {
+  color: darkgreen;
+}
+.brightwhite {
+  color: #ffffff;
+}
+.blue {
+  color: blue;
+  font-family: 'Lucida Console', 'Courier New', Courier, monospace, Fixedsys;
+}
+.black {
+  color: #000000;
+}
+.turquoise {
+  color: mediumslateblue;
+}
+.red {
+  color: #ff0000;
+}
+.green {
+  color: #008000;
+}
+.dbgrheader {
+  font-size: 36px;
+  color: white;
+  font-family: 'Lucida Console', Courier, monospace;
+  background-color: darkgreen;
+}
+.unibutton {
+  border: thin outset;
+  color: navy;
+  text-indent: 0;
+  font-family: Arial, sans-serif, Helvetica;
+  font-weight: bold;
+  background-color: silver;
+}
+.upper {
+  text-transform: uppercase;
+  background-color: #f8f8ff;
+}
+.backred {
+  font-size: small;
+  color: black;
+  font-family: 'Lucida Console', Courier, monospace;
+  background-color: red;
+}
+.dbgrbackred {
+  font-size: 18px;
+  color: black;
+  font-family: Arial, 'Lucida Console', Courier, monospace;
+  background-color: #ff0000;
+}
+.warning {
+  font-size: large;
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: yellow;
+}
+.hidden {
+  border: none;
+  background-color: transparent;
+}
+.message {
+  font-weight: bolder;
+  color: red;
+  font-style: normal;
+  font-family: Helvetica, Arial, 'Lucida Console', sans-serif, Fixedsys, monospace;
+  background-color: transparent;
+}
+.dbgrmessage {
+  font-weight: bolder;
+  font-size: 18px;
+  color: red;
+  font-style: normal;
+  font-family: Helvetica, Arial, 'Lucida Console', sans-serif, Fixedsys, monospace;
+  background-color: transparent;
+}
+.popupmiddle {
+  background: #D8EBD9;
+  font-family: Tahoma, Verdana, Arial;
+}
+.popuptop {
+  background: #D8EBD9;
+  border-style: none;
+  font-family: Tahoma, Verdana, Arial;
+}
+.popupright {
+  background: #D8EBD9;
+  border-style: none;
+  font-family: Tahoma, Verdana, Arial;
+}
+.popupover {
+  background: #D8EBD9;
+  font-family: Tahoma, Verdana, Arial;
+}
+.b_white {
+  background: #ffffff;
+}
+/* =================================================================================
+Column Themes
+==================================================================================*/
+#leftColumn {
+  
+}
+#mainColumn {
+ 
+}
+#rightColumn {
+  
+}
+/* =================================================================================
+Link Themed Elements
+==================================================================================*/
+#manApp a {
+  cursor: pointer;
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  text-decoration: none;
+  color: #37939b;
+}
+#manApp a:hover {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  text-decoration: underline;
+  color: #6dc4cb;
+}
+#manApp a:active {
+  box-shadow: 0 0 1px #008000 inset;
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  text-decoration: underline;
+  color: #37939b;
+}
+#manApp a:visited {
+  cursor: pointer;
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  text-decoration: none;
+  color: #6dc4cb;
+}
+/* =================================================================================
+MANTIS System Messages Themed Elements
+==================================================================================*/
+.warning {
+  background: #ffff00;
+  font: normal normal bold 1.2em Arial, Helvetica, sans-serif;
+  color: #222222;
+  border: 0 solid ;
+}
+.message {
+  background: transparent;
+  font: normal normal bold 1.2em Arial, Helvetica, sans-serif;
+  color: #ff0000;
+  border: 0 solid #ffff00;
+  text-align: left;
+}
+/* =================================================================================
+General Input Themed Elements
+==================================================================================*/
+input {
+	font-size:.9em;
+}
+input:focus {
+
+}
+/* =================================================================================
+Multiple Row Themed Elements
+==================================================================================*/
+.wrapAgain {
+  border: 1px solid #dddddd;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* =================================================================================
+Multiple Column Themed Elements
+==================================================================================*/
+.manColumnWrap {
+  border: 1px solid #dddddd;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* =================================================================================
+Table Themed Elements
+==================================================================================*/
+td {
+  border: none;
+  font-size: 1.05em;
+  /*color: darkgreen;*/
+  font-family: 'Lucida Console', 'Courier New', Courier, monospace, Fixedsys;
+  background-color: transparent;
+}
+tr {
+  font-size: 1em;
+  /*color: darkgreen;*/
+  font-family: 'Lucida Console', 'Courier New', Courier, monospace, Fixedsys;
+  background-color: transparent;
+}
+.manTableWrap table {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  color: #ffffff;
+  display: table;
+}
+.manTableWrap tr {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+}
+.manTableWrap th,
+.manTableWrap td {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  border: 1px solid #aaaaaa;
+}
+.manTableWrap th {
+  font: normal normal normal 1.5em Georgia, serif;
+  color: #ffffff;
+  background: #525959;
+}
+.manTableWrap tr:nth-child(even) input {
+  background: #f5f5f5;
+}
+.mTable{
+	border:1px solid #222;
+}
+.mTable th{
+	border:1px solid #222;
+	background-color:#bbb;
+}
+.mTable td{
+	border:1px solid #222;
+}
+/* =================================================================================
+Navigation Themed Elements
+==================================================================================*/
+nav {
+  border: 1px solid #222222;
+  background-image: url('../images/pattern_1.png');
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.5);
+  font: 500 1.3em Tahoma, Sans-serif;
+}
+.menuIcon {
+  font-size: 80%;
+  text-shadow: 1px 1px 0 #555555;
+}
+nav li a {
+  border-left: 1px solid #999999;
+  border-right: 1px solid #222222;
+  color: #eeeeee;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #555555;
+}
+nav li a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+nav li:first-child a {
+  border-left: none;
+}
+nav ul ul {
+  background-image: url('../images/pattern_1.png');
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  box-shadow: 1px 3px 3px 1px #000000 ;
+}
+.ribbonMenu ul ul {
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+}
+nav ul ul a {
+  border-left: none;
+  border-right: none;
+}
+nav ul ul a:hover {
+  background-color: #000000;
+  color: #eeeeee;
+}
+.itemhover {
+  background-color: #000000;
+}
+nav ul ul {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+nav .second ul {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 4px;
+}
+.ribbonMenu .second ul {
+  background-image: url('../images/pattern_1.png');
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+  border-radius: none;
+}
+nav .second li {
+  background-image: url('../images/pattern_1.png');
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+}
+.ribbonMenu .second li {
+  background: none;
+}
+nav .second .last {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.ribbonMenu .second .last {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+nav #ddtopmenu {
+  background: none;
+  border: none;
+  color: black;
+}
+nav #ddtopmenu select {
+  background: none;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+  color: black;
+  border-radius: 4px;
+}
+/* mantisMenu Mini Theme */
+.miniMenu {
+  border: 1px solid #222222;
+  background-image: url('../images/pattern_1.png');
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.5);
+  font: 500 1.3em Tahoma, Sans-serif;
+  transform: translate3d(0, 0, 0);
+}
+.miniMenu a {
+  color: #eeeeee;
+  text-decoration: none;
+  /*text-shadow:@navigation_font_shadow;*/
+}
+.miniMenu li a {
+  border-left: 0 solid #999999;
+  border-bottom: 1px solid #222222;
+}
+.miniMenu li a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.miniMenu li:first-child a {
+  border-left: none;
+}
+.pagepush {
+  background-color: #333;
+  color: #FFF;
+  transform: translate3d(0, 0, 0);
+}
+.miniMenu ul ul {
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  box-shadow: 1px 1px 3px 0 #000000 inset;
+}
+.miniMenu ul ul a {
+  border-left: none;
+  border-right: none;
+}
+.miniMenu ul ul a:hover {
+  background-color: #000000;
+  color: #eeeeee;
+}
+.itemhover {
+  background-color: #000000;
+}
+.miniMenu ul ul {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.miniMenu .second ul {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 4px;
+}
+.miniMenu .second li {
+  background-color: #525959;
+  background-color: rgba(83, 90, 90, 0.75);
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+}
+.miniMenu .second .last {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* =================================================================================
+Button Themed Elements
+==================================================================================*/
+.button {
+  /*.mRounded;*/
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #ffffff;
+  background:-webkit-linear-gradient(top, rgb(123, 201, 204) 22%, rgb(66, 156, 163) 80%);
+  background:-ms-linear-gradient(top, rgb(123, 201, 204) 22%, rgb(66, 156, 163) 80%);
+  background:-moz-linear-gradient(top, rgb(123, 201, 204) 22%, rgb(66, 156, 163) 80%);
+  background:linear-gradient(top, rgb(123, 201, 204) 22%, rgb(66, 156, 163) 80%);
+  box-shadow: 1px 1px 2px #222222;
+  padding: 7px 28px;
+  font: normal 600 1.5em Ariel, Tahoma, Verdana, san-serif;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button:hover {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #fbfbfb;
+  border-bottom: 1px solid #d5d5d5;
+  border-left: 1px solid #fbfbfb;
+  background:-webkit-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:-ms-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:-moz-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  box-shadow: 1px 1px 2px #222222;
+  padding: 7px 28px;
+  font: normal 600 1.5em Ariel, Tahoma, Verdana, san-serif;
+  color: #ffffff;
+}
+.button:active {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #ffffff;
+  background:-webkit-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:-ms-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:-moz-linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  background:linear-gradient(top, rgb(196, 228, 229) 22%, rgb(59, 149, 157) 80%);
+  box-shadow: none;
+  padding: 7px 28px;
+  font: normal 600 1.5em Ariel, Tahoma, Verdana, san-serif;
+  color: #333333;
+}
+/* =================================================================================
+Canvas Themed Elements
+==================================================================================*/
+.manCanvas {
+  border: 1px solid #aaaaaa;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* =================================================================================
+Checkbox Themed Elements
+==================================================================================*/
+input[type=checkbox], input[type=checkbox] + label {
+  cursor: pointer;
+}
+/* =================================================================================
+Date Themed Elements
+==================================================================================*/
+input[type=date] {
+  
+}
+/* =================================================================================
+Graph/Plot Themed Elements
+==================================================================================*/
+/*rules for the plot target div. M$mantisPlot() in mantis.ajax.js for more.*/
+.jqplot-grid-canvas {
+  background: none;
+  border: 0 solid #aaaaaa;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: none;
+}
+.jqplot-target {
+  color: #666666;
+  font-family: normal normal normal 12px Verdana, Geneva, sans-serif;
+  font-size: 1em;
+}
+/*rules applied to all axes*/
+.jqplot-axis {
+  font-size: 0.75em;
+}
+.jqplot-yaxis-tick.jqplot-breakTick {
+  font-size: 1.5em;
+}
+.jqplot-xaxis-label {
+  font-size: 11pt;
+}
+.jqplot-x2axis-label {
+  font-size: 11pt;
+}
+.jqplot-yaxis-label {
+  /*    text-align: center;*/
+  font-size: 11pt;
+}
+.jqplot-yMidAxis-label {
+  font-size: 11pt;
+}
+.jqplot-y2axis-label,
+.jqplot-y3axis-label,
+.jqplot-y4axis-label,
+.jqplot-y5axis-label,
+.jqplot-y6axis-label,
+.jqplot-y7axis-label,
+.jqplot-y8axis-label,
+.jqplot-y9axis-label {
+  /*    text-align: center;*/
+  font-size: 11pt;
+}
+.jqplot-meterGauge-tick {
+  font-size: 0.75em;
+  color: #999999;
+}
+.jqplot-meterGauge-label {
+  font-size: 1em;
+  color: #999999;
+}
+table.jqplot-table-legend,
+table.jqplot-cursor-legend {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #cccccc;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 0.75em;
+}
+td.jqplot-seriesToggle:hover,
+td.jqplot-seriesToggle:active {
+  cursor: pointer;
+}
+.jqplot-table-legend .jqplot-series-hidden {
+  text-decoration: line-through;
+}
+div.jqplot-table-legend-swatch-outline {
+  border: 1px solid #cccccc;
+}
+div.jqplot-table-legend-swatch {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 6px;
+  border-right-width: 6px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.jqplot-title {
+  font-size: 1.2em;
+}
+table.jqplot-cursor-tooltip {
+  border: 1px solid #cccccc;
+  font-size: 0.75em;
+}
+.jqplot-cursor-tooltip {
+  border: 1px solid #cccccc;
+  font-size: 0.75em;
+  background: rgba(208, 208, 208, 0.5);
+}
+.jqplot-highlighter-tooltip,
+.jqplot-canvasOverlay-tooltip {
+  border: 1px solid #cccccc;
+  font-size: 0.75em;
+  background: rgba(208, 208, 208, 0.5);
+}
+.jqplot-point-label {
+  font-size: 0.75em;
+}
+div.jqplot-bubble-label {
+  font-size: 0.8em;
+  /*    background: rgba(90%, 90%, 90%, 0.15);*/
+  color: #333333;
+}
+div.jqplot-bubble-label.jqplot-bubble-label-highlight {
+  background: rgba(230, 230, 230, 0.7);
+}
+div.jqplot-noData-container {
+  background-color: rgba(245, 245, 245, 0.3);
+}
+/* =================================================================================
+Image Themed Elements
+==================================================================================*/
+.manImage {
+  border: 0 solid #aaaaaa;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* =================================================================================
+Image Input Themed Elements
+==================================================================================*/
+input[type=image] {
+  
+}
+/* =================================================================================
+Radio Button Themed Elements
+==================================================================================*/
+input[type=radio], input[type=radio] + label {
+  cursor: pointer;
+}
+/* =================================================================================
+Range Slider Themed Elements (to new)
+==================================================================================*/
+input[type=range] {
+	
+}
+.manSliderB {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  color: #808080;
+  border: 1px solid #808080;
+}
+/* MS styling */
+input[type="range"]::-ms-fill-upper {
+  background-color: green;
+}
+input[type="range"]::-ms-fill-lower {
+  background-color: LimeGreen;
+}
+/* =================================================================================
+Range Spinner Themed Elements
+==================================================================================*/
+.ui-spinner {
+  cursor: pointer;
+}
+.ui-spinner-button {
+  cursor: pointer;
+}
+.ui-spinner.ui-corner-all {
+  border-radius: 0;
+}
+input[type=number] {
+
+}
+/* =================================================================================
+Select Dropdown Themed Elements
+==================================================================================*/
+.manDropdown {
+  background: #ffffff;
+  cursor: pointer;
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+  color: #000000;
+  border: 1px solid #aaaaaa;
+  border-radius: 0;
+  box-shadow: none;
+}
+.manDropdown:focus {
+  box-shadow: 0 0 5px #000000;
+  border: 1px solid #aaaaaa;
+}
+/* =================================================================================
+Tabs Themed Elements
+==================================================================================*/
+/* Tab Widget Properties */
+/*contrast for visibility*/
+/* =================================================================================
+Color Picker (fallback) Elements
+==================================================================================*/
+.jPicker .Icon span.Color,
+.jPicker .Icon span.Alpha {
+  background-position: 2px 2px;
+}
+.jPicker .Icon span.Image {
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.jPicker.Container {
+  color: #000;
+}
+table.jPicker {
+  background-color: #efefef;
+  border: 1px outset #666;
+  font-family: normal normal normal 12px Verdana, Geneva, sans-serif;
+  font-size: 12px!important;
+}
+.jPicker .Move {
+  background-color: #ddd;
+  border-color: #fff #666 #666 #fff;
+  border-style: solid;
+  border-width: 1px;
+  cursor: move;
+}
+.jPicker .Title {
+  font-size: 11px!important;
+  font-weight: bold;
+}
+.jPicker div.Map {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #9a9a9a;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #9a9a9a;
+  cursor: crosshair;
+}
+.jPicker div[class="Map"] {
+  height: 256px;
+  width: 256px;
+}
+.jPicker div.Bar {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #9a9a9a;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #9a9a9a;
+  cursor: n-resize;
+}
+.jPicker .Map .Map1,
+.jPicker .Map .Map2,
+.jPicker .Map .Map3,
+.jPicker .Bar .Map1,
+.jPicker .Bar .Map2,
+.jPicker .Bar .Map3,
+.jPicker .Bar .Map4,
+.jPicker .Bar .Map5,
+.jPicker .Bar .Map6 {
+  background-color: transparent;
+  background-image: none;
+}
+.jPicker .Map .Map1,
+.jPicker .Map .Map2,
+.jPicker .Bar .Map6 {
+  background-repeat: no-repeat;
+}
+.jPicker .Map .Map3,
+.jPicker .Bar .Map5 {
+  background-repeat: repeat;
+}
+.jPicker .Bar .Map1,
+.jPicker .Bar .Map2,
+.jPicker .Bar .Map3,
+.jPicker .Bar .Map4 {
+  background-repeat: repeat-x;
+}
+.jPicker .Preview {
+  font-size: 9px;
+}
+.jPicker .Preview div {
+  border: 2px inset #eee;
+}
+.jPicker .Preview div span {
+  border: 1px solid #000;
+}
+.jPicker .Preview .Active {
+  border-bottom-width: 0;
+}
+.jPicker .Preview .Current {
+  border-top-width: 0;
+}
+.jPicker input {
+  font-size: 13px;
+}
+.jPicker td.Text {
+  font-size: 12px!important;
+}
+.jPicker tr.Hex td.Text {
+  width: 100px;
+}
+.jPicker td.Text input {
+  background-color: #fff;
+  border: 1px inset #aaa;
+}
+.jPicker .Grid span.QuickColor {
+  border: 1px inset #aaa;
+}
+#jPicker ul {
+  font-size: 15px;
+}
+#jPicker ul li {
+  list-style: disc;
+}
+#jPicker ul li ul li {
+  list-style: circle;
+}
+#jPicker p {
+  font-size: 13px;
+}
+#jPicker hr {
+  clear: both;
+}
+#jPicker h2.jPicker {
+  font-size: 16px;
+}
+#jPicker code {
+  color: #8bd;
+  font-size: 14px;
+  font-weight: bold;
+}
+#jPicker pre {
+  background: #eee;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 11px;
+}
+#jPicker span {
+  font-size: 13px;
+}
+#jPicker a {
+  color: #ff8050;
+}
+#jPicker input {
+  font-size: 13px;
+}
+#jPicker h2 {
+  font-size: 16px;
+}
+/* =================================================================================
+SlideShow Controls
+==================================================================================*/
+#sALeft {
+  cursor: pointer;
+  transition: background 0.4s ease;
+  background: url('../images/MantisArrowBtns_ArrowLeft_static.png') no-repeat center center;
+}
+#sALeft:hover {
+  background: url('../images/MantisArrowBtns_ArrowLeft_rollover.png') no-repeat center center;
+}
+#sARight {
+  cursor: pointer;
+  transition: background 0.4s ease;
+  background: url('../images/MantisArrowBtns_ArrowRight_static.png') no-repeat center center;
+}
+#sARight:hover {
+  background: url('../images/MantisArrowBtns_ArrowRight_rollover.png') no-repeat center center;
+}
+/* =================================================================================
+Extension for jquery UI Elements
+==================================================================================*/
+.ui-widget {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+}
+.ui-widget .ui-widget {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font: normal normal normal 12px Verdana, Geneva, sans-serif;
+}
+.ui-widget-content {
+  border: 1px solid #aaaaaa;
+  background: #ffffff url(../images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+  color: #222222;
+}
+.ui-widget-content a {
+  color: #222222;
+}
+.ui-widget-header {
+  border: 1px solid #aaaaaa;
+  background: #cccccc url(../images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+  color: #222222;
+  font-weight: bold;
+}
+.ui-widget-header a {
+  color: #222222;
+}
+/* Interaction states */
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6 url(../images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+  font-weight: normal;
+  color: #555555;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+  color: #555555;
+  text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 1px solid #999999;
+  background: #dadada url(../images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+  font-weight: normal;
+  color: #212121;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+  color: #212121;
+  text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  border: 1px solid #aaaaaa;
+  background: #ffffff url(../images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+  font-weight: normal;
+  color: #212121;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+  color: #212121;
+  text-decoration: none;
+}
+/* Interaction Cues */
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid #fcefa1;
+  background: #fbf9ee url(../images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+  color: #363636;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+  color: #363636;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  border: 1px solid #cd0a0a;
+  background: #fef1ec url(../images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+  color: #cd0a0a;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+  color: #cd0a0a;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+  color: #cd0a0a;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+  font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+  opacity: .7;
+  filter: alpha(opacity=70);
+  font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+  opacity: .35;
+  filter: alpha(opacity=35);
+  background-image: none;
+}
+.ui-state-disabled .ui-icon {
+  filter: alpha(opacity=35);
+  /* For IE8 - See #6059 */
+}
+/* Icons */
+/* states and images */
+.ui-icon {
+  width: 16px;
+  height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+  background-image: url(../images/ui-icons_222222_256x240.png);
+}
+.ui-widget-header .ui-icon {
+  background-image: url(../images/ui-icons_222222_256x240.png);
+}
+.ui-state-default .ui-icon {
+  background-image: url(../images/ui-icons_888888_256x240.png);
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+  background-image: url(../images/ui-icons_454545_256x240.png);
+}
+.ui-state-active .ui-icon {
+  background-image: url(../images/ui-icons_454545_256x240.png);
+}
+.ui-state-highlight .ui-icon {
+  background-image: url(../images/ui-icons_2e83ff_256x240.png);
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+  background-image: url(../images/ui-icons_cd0a0a_256x240.png);
+}
+/* positioning */
+.ui-icon-blank {
+  background-position: 16px 16px;
+}
+.ui-icon-carat-1-n {
+  background-position: 0 0;
+}
+.ui-icon-carat-1-ne {
+  background-position: -16px 0;
+}
+.ui-icon-carat-1-e {
+  background-position: -32px 0;
+}
+.ui-icon-carat-1-se {
+  background-position: -48px 0;
+}
+.ui-icon-carat-1-s {
+  background-position: -64px 0;
+}
+.ui-icon-carat-1-sw {
+  background-position: -80px 0;
+}
+.ui-icon-carat-1-w {
+  background-position: -96px 0;
+}
+.ui-icon-carat-1-nw {
+  background-position: -112px 0;
+}
+.ui-icon-carat-2-n-s {
+  background-position: -128px 0;
+}
+.ui-icon-carat-2-e-w {
+  background-position: -144px 0;
+}
+.ui-icon-triangle-1-n {
+  background-position: 0 -16px;
+}
+.ui-icon-triangle-1-ne {
+  background-position: -16px -16px;
+}
+.ui-icon-triangle-1-e {
+  background-position: -32px -16px;
+}
+.ui-icon-triangle-1-se {
+  background-position: -48px -16px;
+}
+.ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+.ui-icon-triangle-1-sw {
+  background-position: -80px -16px;
+}
+.ui-icon-triangle-1-w {
+  background-position: -96px -16px;
+}
+.ui-icon-triangle-1-nw {
+  background-position: -112px -16px;
+}
+.ui-icon-triangle-2-n-s {
+  background-position: -128px -16px;
+}
+.ui-icon-triangle-2-e-w {
+  background-position: -144px -16px;
+}
+.ui-icon-arrow-1-n {
+  background-position: 0 -32px;
+}
+.ui-icon-arrow-1-ne {
+  background-position: -16px -32px;
+}
+.ui-icon-arrow-1-e {
+  background-position: -32px -32px;
+}
+.ui-icon-arrow-1-se {
+  background-position: -48px -32px;
+}
+.ui-icon-arrow-1-s {
+  background-position: -64px -32px;
+}
+.ui-icon-arrow-1-sw {
+  background-position: -80px -32px;
+}
+.ui-icon-arrow-1-w {
+  background-position: -96px -32px;
+}
+.ui-icon-arrow-1-nw {
+  background-position: -112px -32px;
+}
+.ui-icon-arrow-2-n-s {
+  background-position: -128px -32px;
+}
+.ui-icon-arrow-2-ne-sw {
+  background-position: -144px -32px;
+}
+.ui-icon-arrow-2-e-w {
+  background-position: -160px -32px;
+}
+.ui-icon-arrow-2-se-nw {
+  background-position: -176px -32px;
+}
+.ui-icon-arrowstop-1-n {
+  background-position: -192px -32px;
+}
+.ui-icon-arrowstop-1-e {
+  background-position: -208px -32px;
+}
+.ui-icon-arrowstop-1-s {
+  background-position: -224px -32px;
+}
+.ui-icon-arrowstop-1-w {
+  background-position: -240px -32px;
+}
+.ui-icon-arrowthick-1-n {
+  background-position: 0 -48px;
+}
+.ui-icon-arrowthick-1-ne {
+  background-position: -16px -48px;
+}
+.ui-icon-arrowthick-1-e {
+  background-position: -32px -48px;
+}
+.ui-icon-arrowthick-1-se {
+  background-position: -48px -48px;
+}
+.ui-icon-arrowthick-1-s {
+  background-position: -64px -48px;
+}
+.ui-icon-arrowthick-1-sw {
+  background-position: -80px -48px;
+}
+.ui-icon-arrowthick-1-w {
+  background-position: -96px -48px;
+}
+.ui-icon-arrowthick-1-nw {
+  background-position: -112px -48px;
+}
+.ui-icon-arrowthick-2-n-s {
+  background-position: -128px -48px;
+}
+.ui-icon-arrowthick-2-ne-sw {
+  background-position: -144px -48px;
+}
+.ui-icon-arrowthick-2-e-w {
+  background-position: -160px -48px;
+}
+.ui-icon-arrowthick-2-se-nw {
+  background-position: -176px -48px;
+}
+.ui-icon-arrowthickstop-1-n {
+  background-position: -192px -48px;
+}
+.ui-icon-arrowthickstop-1-e {
+  background-position: -208px -48px;
+}
+.ui-icon-arrowthickstop-1-s {
+  background-position: -224px -48px;
+}
+.ui-icon-arrowthickstop-1-w {
+  background-position: -240px -48px;
+}
+.ui-icon-arrowreturnthick-1-w {
+  background-position: 0 -64px;
+}
+.ui-icon-arrowreturnthick-1-n {
+  background-position: -16px -64px;
+}
+.ui-icon-arrowreturnthick-1-e {
+  background-position: -32px -64px;
+}
+.ui-icon-arrowreturnthick-1-s {
+  background-position: -48px -64px;
+}
+.ui-icon-arrowreturn-1-w {
+  background-position: -64px -64px;
+}
+.ui-icon-arrowreturn-1-n {
+  background-position: -80px -64px;
+}
+.ui-icon-arrowreturn-1-e {
+  background-position: -96px -64px;
+}
+.ui-icon-arrowreturn-1-s {
+  background-position: -112px -64px;
+}
+.ui-icon-arrowrefresh-1-w {
+  background-position: -128px -64px;
+}
+.ui-icon-arrowrefresh-1-n {
+  background-position: -144px -64px;
+}
+.ui-icon-arrowrefresh-1-e {
+  background-position: -160px -64px;
+}
+.ui-icon-arrowrefresh-1-s {
+  background-position: -176px -64px;
+}
+.ui-icon-arrow-4 {
+  background-position: 0 -80px;
+}
+.ui-icon-arrow-4-diag {
+  background-position: -16px -80px;
+}
+.ui-icon-extlink {
+  background-position: -32px -80px;
+}
+.ui-icon-newwin {
+  background-position: -48px -80px;
+}
+.ui-icon-refresh {
+  background-position: -64px -80px;
+}
+.ui-icon-shuffle {
+  background-position: -80px -80px;
+}
+.ui-icon-transfer-e-w {
+  background-position: -96px -80px;
+}
+.ui-icon-transferthick-e-w {
+  background-position: -112px -80px;
+}
+.ui-icon-folder-collapsed {
+  background-position: 0 -96px;
+}
+.ui-icon-folder-open {
+  background-position: -16px -96px;
+}
+.ui-icon-document {
+  background-position: -32px -96px;
+}
+.ui-icon-document-b {
+  background-position: -48px -96px;
+}
+.ui-icon-note {
+  background-position: -64px -96px;
+}
+.ui-icon-mail-closed {
+  background-position: -80px -96px;
+}
+.ui-icon-mail-open {
+  background-position: -96px -96px;
+}
+.ui-icon-suitcase {
+  background-position: -112px -96px;
+}
+.ui-icon-comment {
+  background-position: -128px -96px;
+}
+.ui-icon-person {
+  background-position: -144px -96px;
+}
+.ui-icon-print {
+  background-position: -160px -96px;
+}
+.ui-icon-trash {
+  background-position: -176px -96px;
+}
+.ui-icon-locked {
+  background-position: -192px -96px;
+}
+.ui-icon-unlocked {
+  background-position: -208px -96px;
+}
+.ui-icon-bookmark {
+  background-position: -224px -96px;
+}
+.ui-icon-tag {
+  background-position: -240px -96px;
+}
+.ui-icon-home {
+  background-position: 0 -112px;
+}
+.ui-icon-flag {
+  background-position: -16px -112px;
+}
+.ui-icon-calendar {
+  background-position: -32px -112px;
+}
+.ui-icon-cart {
+  background-position: -48px -112px;
+}
+.ui-icon-pencil {
+  background-position: -64px -112px;
+}
+.ui-icon-clock {
+  background-position: -80px -112px;
+}
+.ui-icon-disk {
+  background-position: -96px -112px;
+}
+.ui-icon-calculator {
+  background-position: -112px -112px;
+}
+.ui-icon-zoomin {
+  background-position: -128px -112px;
+}
+.ui-icon-zoomout {
+  background-position: -144px -112px;
+}
+.ui-icon-search {
+  background-position: -160px -112px;
+}
+.ui-icon-wrench {
+  background-position: -176px -112px;
+}
+.ui-icon-gear {
+  background-position: -192px -112px;
+}
+.ui-icon-heart {
+  background-position: -208px -112px;
+}
+.ui-icon-star {
+  background-position: -224px -112px;
+}
+.ui-icon-link {
+  background-position: -240px -112px;
+}
+.ui-icon-cancel {
+  background-position: 0 -128px;
+}
+.ui-icon-plus {
+  background-position: -16px -128px;
+}
+.ui-icon-plusthick {
+  background-position: -32px -128px;
+}
+.ui-icon-minus {
+  background-position: -48px -128px;
+}
+.ui-icon-minusthick {
+  background-position: -64px -128px;
+}
+.ui-icon-close {
+  background-position: -80px -128px;
+}
+.ui-icon-closethick {
+  background-position: -96px -128px;
+}
+.ui-icon-key {
+  background-position: -112px -128px;
+}
+.ui-icon-lightbulb {
+  background-position: -128px -128px;
+}
+.ui-icon-scissors {
+  background-position: -144px -128px;
+}
+.ui-icon-clipboard {
+  background-position: -160px -128px;
+}
+.ui-icon-copy {
+  background-position: -176px -128px;
+}
+.ui-icon-contact {
+  background-position: -192px -128px;
+}
+.ui-icon-image {
+  background-position: -208px -128px;
+}
+.ui-icon-video {
+  background-position: -224px -128px;
+}
+.ui-icon-script {
+  background-position: -240px -128px;
+}
+.ui-icon-alert {
+  background-position: 0 -144px;
+}
+.ui-icon-info {
+  background-position: -16px -144px;
+}
+.ui-icon-notice {
+  background-position: -32px -144px;
+}
+.ui-icon-help {
+  background-position: -48px -144px;
+}
+.ui-icon-check {
+  background-position: -64px -144px;
+}
+.ui-icon-bullet {
+  background-position: -80px -144px;
+}
+.ui-icon-radio-on {
+  background-position: -96px -144px;
+}
+.ui-icon-radio-off {
+  background-position: -112px -144px;
+}
+.ui-icon-pin-w {
+  background-position: -128px -144px;
+}
+.ui-icon-pin-s {
+  background-position: -144px -144px;
+}
+.ui-icon-play {
+  background-position: 0 -160px;
+}
+.ui-icon-pause {
+  background-position: -16px -160px;
+}
+.ui-icon-seek-next {
+  background-position: -32px -160px;
+}
+.ui-icon-seek-prev {
+  background-position: -48px -160px;
+}
+.ui-icon-seek-end {
+  background-position: -64px -160px;
+}
+.ui-icon-seek-start {
+  background-position: -80px -160px;
+}
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first {
+  background-position: -80px -160px;
+}
+.ui-icon-stop {
+  background-position: -96px -160px;
+}
+.ui-icon-eject {
+  background-position: -112px -160px;
+}
+.ui-icon-volume-off {
+  background-position: -128px -160px;
+}
+.ui-icon-volume-on {
+  background-position: -144px -160px;
+}
+.ui-icon-power {
+  background-position: 0 -176px;
+}
+.ui-icon-signal-diag {
+  background-position: -16px -176px;
+}
+.ui-icon-signal {
+  background-position: -32px -176px;
+}
+.ui-icon-battery-0 {
+  background-position: -48px -176px;
+}
+.ui-icon-battery-1 {
+  background-position: -64px -176px;
+}
+.ui-icon-battery-2 {
+  background-position: -80px -176px;
+}
+.ui-icon-battery-3 {
+  background-position: -96px -176px;
+}
+.ui-icon-circle-plus {
+  background-position: 0 -192px;
+}
+.ui-icon-circle-minus {
+  background-position: -16px -192px;
+}
+.ui-icon-circle-close {
+  background-position: -32px -192px;
+}
+.ui-icon-circle-triangle-e {
+  background-position: -48px -192px;
+}
+.ui-icon-circle-triangle-s {
+  background-position: -64px -192px;
+}
+.ui-icon-circle-triangle-w {
+  background-position: -80px -192px;
+}
+.ui-icon-circle-triangle-n {
+  background-position: -96px -192px;
+}
+.ui-icon-circle-arrow-e {
+  background-position: -112px -192px;
+}
+.ui-icon-circle-arrow-s {
+  background-position: -128px -192px;
+}
+.ui-icon-circle-arrow-w {
+  background-position: -144px -192px;
+}
+.ui-icon-circle-arrow-n {
+  background-position: -160px -192px;
+}
+.ui-icon-circle-zoomin {
+  background-position: -176px -192px;
+}
+.ui-icon-circle-zoomout {
+  background-position: -192px -192px;
+}
+.ui-icon-circle-check {
+  background-position: -208px -192px;
+}
+.ui-icon-circlesmall-plus {
+  background-position: 0 -208px;
+}
+.ui-icon-circlesmall-minus {
+  background-position: -16px -208px;
+}
+.ui-icon-circlesmall-close {
+  background-position: -32px -208px;
+}
+.ui-icon-squaresmall-plus {
+  background-position: -48px -208px;
+}
+.ui-icon-squaresmall-minus {
+  background-position: -64px -208px;
+}
+.ui-icon-squaresmall-close {
+  background-position: -80px -208px;
+}
+.ui-icon-grip-dotted-vertical {
+  background-position: 0 -224px;
+}
+.ui-icon-grip-dotted-horizontal {
+  background-position: -16px -224px;
+}
+.ui-icon-grip-solid-vertical {
+  background-position: -32px -224px;
+}
+.ui-icon-grip-solid-horizontal {
+  background-position: -48px -224px;
+}
+.ui-icon-gripsmall-diagonal-se {
+  background-position: -64px -224px;
+}
+.ui-icon-grip-diagonal-se {
+  background-position: -80px -224px;
+}
+/* Misc visuals */
+/* Corner radius */
+.ui-corner-all {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* =================================================================================
+Dialog and Lightbox fixes
+==================================================================================*/
+.ui-widget-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1001;
+}
+.ui-dialog {
+  z-index: 1002 !important;
+}

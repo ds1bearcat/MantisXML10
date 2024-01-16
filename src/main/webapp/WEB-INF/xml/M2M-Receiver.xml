@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<!-- CONTROL-XMLStart -->
+<!-- SOAP RPC BODY requires fully qualified element name with namespace, thus the next line --> 
+<ns1:FORMDATA xmlns:ns1="http://appdev.cincom.com/MantisServer" NAME="CONTROL-XMLSTART">
+   <CONTROL-XMLSTART>
+	<CLEARANCE>CASINO</CLEARANCE>
+	<NAME>EXAMLES</NAME>
+	<PARAMETER>RECEIVER</PARAMETER>
+	<MODE>WS-RPC</MODE> <!-- WS-RPC is ONLY valid value for MODE -->
+   </CONTROL-XMLSTART>
+   <CONTROL-TRACE>
+	<MESSAGEDUMP></MESSAGEDUMP>
+	<DUMPFILENAME></DUMPFILENAME>
+	<MONITORDUMP></MONITORDUMP>
+	<MONITORFILENAME></MONITORFILENAME>
+   </CONTROL-TRACE>
+</ns1:FORMDATA>

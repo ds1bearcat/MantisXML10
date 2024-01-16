@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:FORMDATA NAME="CONTROL-XMLSTART" xmlns:ns1="http://appdev.cincom.com/MantisServer">
+    <CONTROL-XMLSTART>
+        <CLEARANCE>MASTER</CLEARANCE>
+        <NAME>MASTER</NAME>
+        <PARAMETER>CONTROL:ASP_DISPLAY_IN_BROWSER;GARY</PARAMETER>
+        <MODE/>
+        <!-- WS-RPC is ONLY valid value for MODE -->
+    </CONTROL-XMLSTART>
+    <CONTROL-RESERVED_INFO>
+        <INPUT_LINE>      CDM</INPUT_LINE>
+        <KEYSIM>PF00</KEYSIM>
+    </CONTROL-RESERVED_INFO>
+    <CONTROL-TRACE>
+        <MESSAGEDUMP/>
+        <DUMPFILENAME/>
+        <MONITORDUMP/>
+        <MONITORFILENAME/>
+    </CONTROL-TRACE>
+</ns1:FORMDATA>

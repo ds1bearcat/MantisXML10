@@ -1,0 +1,9 @@
+Manifest-Version: 2.0.03
+
+Name: com/cincom/MantisWeb/
+Specification-Title: "MantisWeb" 
+Specification-Version: "2.0"
+Specification-Vendor: "Cincom Systems, Inc.".
+Implementation-Title: "com.cincom.MantisWeb" 
+Implementation-Version: "2.0.03"
+Implementation-Vendor: "Cincom Systems, Inc."

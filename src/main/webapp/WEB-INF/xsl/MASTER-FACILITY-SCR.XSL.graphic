@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--MASTER-FACILITY-INC.XSL-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" indent="yes"/>
+<xsl:template match="MASTER-FACILITY">
+		<!-- header image = cincom logo + web doc services + version -->
+<!--		<img src="images/header.jpg" alt="" border="0"/>
+		<img src="images/background.jpg" alt="" border="0"/>-->
+		
+		<script type="text/javascript">
+			var agt=navigator.userAgent.toLowerCase();
+			var is_ie = ((agt.indexOf("msie") != -1) &amp;&amp; (agt.indexOf("opera") == -1));
+
+			var buttonImages = new Array(20);
+			var buttonImagesOver = new Array(20);
+			var numberImages = new Array(20);
+			var numberImagesOver = new Array(20);
+			var submitButtonImages = new Array(5);
+			var submitButtonImagesOver = new Array(5);
+			
+			createImage(1,"images/Program.jpg");
+			createImage(2,"images/Screen.jpg");
+			createImage(3,"images/MANTISfileView.jpg");
+			createImage(4,"images/Prompter.jpg");
+			createImage(5,"images/Interface.jpg");
+			createImage(6,"images/TotalFileView.jpg");
+			createImage(7,"images/ExternalFileView.jpg");
+			createImage(8,"images/DLIAccessView.jpg");
+			createImage(9,"images/SearchFacility.jpg");
+			createImage(10,"images/SwitchUserName.jpg");
+			createImage(11,"images/DirectoryFacility.jpg");
+			createImage(12,"images/Transfer.jpg");
+			createImage(13,"images/UniversalExport.jpg");
+			createImage(14,"images/CrossReference.jpg");
+			createImage(15,"images/PrintFacility.jpg");
+			createImage(16,"images/QueryReportWriter.jpg");
+			createImage(17,"images/SwitchUserName.jpg");
+			createImage(18,"images/RunAProgram.jpg");
+			createImage(19,"images/DisplayaPrompter.jpg");
+			
+			createImageOver(1,"images/ProgramOVER.jpg");
+			createImageOver(2,"images/ScreenOVER.jpg");
+			createImageOver(3,"images/MANTISfileViewOVER.jpg");
+			createImageOver(4,"images/PrompterOVER.jpg");
+			createImageOver(5,"images/InterfaceOVER.jpg");
+			createImageOver(6,"images/TotalFileViewOVER.jpg");
+			createImageOver(7,"images/ExternalFileViewOVER.jpg");
+			createImageOver(8,"images/DLIAccessViewOVER.jpg");
+			createImageOver(9,"images/SearchFacilityOVER.jpg");
+			createImageOver(10,"images/SwitchUserNameOVER.jpg");
+			createImageOver(11,"images/DirectoryFacilityOVER.jpg");
+			createImageOver(12,"images/TransferOVER.jpg");
+			createImageOver(13,"images/UniversalExportOVER.jpg");
+			createImageOver(14,"images/CrossReferenceOVER.jpg");
+			createImageOver(15,"images/PrintFacilityOVER.jpg");
+			createImageOver(16,"images/QueryReportWriterOVER.jpg");
+			createImageOver(17,"images/SwitchUserNameOVER.jpg");
+			createImageOver(18,"images/RunAProgramOVER.jpg");
+			createImageOver(19,"images/DisplayaPrompterOVER.jpg");
+	
+			createNumberImage(1,"images/01.jpg");
+			createNumberImage(2,"images/02.jpg");
+			createNumberImage(3,"images/03.jpg");
+			createNumberImage(4,"images/04.jpg");
+			createNumberImage(5,"images/05.jpg");
+			createNumberImage(6,"images/06.jpg");
+			createNumberImage(7,"images/07.jpg");
+			createNumberImage(8,"images/08.jpg");
+			createNumberImage(9,"images/09.jpg");
+			createNumberImage(10,"images/10.jpg");
+			createNumberImage(11,"images/11.jpg");
+			createNumberImage(12,"images/12.jpg");
+			createNumberImage(13,"images/13.jpg");
+			createNumberImage(14,"images/14.jpg");
+			createNumberImage(15,"images/15.jpg");
+			createNumberImage(16,"images/16.jpg");
+			createNumberImage(17,"images/17.jpg");
+			createNumberImage(18,"images/18.jpg");
+			createNumberImage(19,"images/19.jpg");
+			
+			createNumberImageOver(1,"images/01OVER.jpg");
+			createNumberImageOver(2,"images/02OVER.jpg");
+			createNumberImageOver(3,"images/03OVER.jpg");
+			createNumberImageOver(4,"images/04OVER.jpg");
+			createNumberImageOver(5,"images/05OVER.jpg");
+			createNumberImageOver(6,"images/06OVER.jpg");
+			createNumberImageOver(7,"images/07OVER.jpg");
+			createNumberImageOver(8,"images/08OVER.jpg");
+			createNumberImageOver(9,"images/09OVER.jpg");
+			createNumberImageOver(10,"images/10OVER.jpg");
+			createNumberImageOver(11,"images/11OVER.jpg");
+			createNumberImageOver(12,"images/12OVER.jpg");
+			createNumberImageOver(13,"images/13OVER.jpg");
+			createNumberImageOver(14,"images/14OVER.jpg");
+			createNumberImageOver(15,"images/15OVER.jpg");
+			createNumberImageOver(16,"images/16OVER.jpg");
+			createNumberImageOver(17,"images/17OVER.jpg");
+			createNumberImageOver(18,"images/18OVER.jpg");
+			createNumberImageOver(19,"images/19OVER.jpg");
+	
+			submitButtonImages[1] = new Image();
+			submitButtonImages[1].src = 'images/Submit.png';
+			submitButtonImagesOver[1] = new Image();
+			submitButtonImagesOver[1].src = 'images/SubmitOVER.png';
+			submitButtonImages[2] = new Image();
+			submitButtonImages[2].src = 'images/Cancel.png';
+			submitButtonImagesOver[2] = new Image();
+			submitButtonImagesOver[2].src = 'images/CancelOVER.png';
+			submitButtonImages[3] = new Image();
+			submitButtonImages[3].src = 'images/Exit.png';
+			submitButtonImagesOver[3] = new Image();
+			submitButtonImagesOver[3].src = 'images/ExitOVER.png';
+	
+			function createImage(index,name)
+			{
+				buttonImages[index] = new Image();
+				buttonImages[index].src = name;
+			}
+			
+			function createImageOver(index,name)
+			{
+				buttonImagesOver[index] = new Image();
+				buttonImagesOver[index].src = name;
+			}
+	
+			function createNumberImage(index,name)
+			{
+				numberImages[index] = new Image();
+				numberImages[index].src = name;
+			}
+			
+			function createNumberImageOver(index,name)
+			{
+				numberImagesOver[index] = new Image();
+				numberImagesOver[index].src = name;
+			}
+	
+			function showImage(index)
+			{
+				var obj = null;
+				obj = document.getElementById("image" + index);
+				if (obj)
+					obj.src = buttonImages[index].src;
+				obj = document.getElementById("image" + index + "Num");
+				if (obj)
+					obj.src = numberImages[index].src;
+			}
+			
+			function showImageOver(index)
+			{
+				var obj = null;
+				obj = document.getElementById("image" + index);
+				if (obj)
+					obj.src = buttonImagesOver[index].src;
+				obj = document.getElementById("image" + index + "Num");
+				if (obj)
+					obj.src = numberImagesOver[index].src;
+			}
+			
+			function showSubmitButton(index)
+			{
+				var obj = null;
+				obj = document.getElementById("submitButton" + index);
+				if (obj)
+				{
+					if (is_ie)
+						obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + submitButtonImages[index].src + "', sizingMethod='image')";
+					else
+						obj.src = submitButtonImages[index].src;
+				}
+			}
+	
+			function showSubmitButtonOver(index)
+			{
+				var obj = null;
+				obj = document.getElementById("submitButton" + index);
+				if (obj)
+				{
+					if (is_ie)
+						obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + submitButtonImagesOver[index].src + "', sizingMethod='image')";
+					else
+						obj.src = submitButtonImagesOver[index].src;
+				}
+			}
+
+//			function showSubmitButton(index)
+//			{
+//				var obj = null;
+//				obj = document.getElementById("submitButton" + index);
+//				if (obj)
+//					obj.src = submitButtonImages[index].src;
+//			}
+//	
+//			function showSubmitButtonOver(index)
+//			{
+//				var obj = null;
+//				obj = document.getElementById("submitButton" + index);
+//				if (obj)
+//					obj.src = submitButtonImagesOver[index].src;
+//			}
+	
+		</script>
+		
+		<div class="mainbg">
+			<img src="images/YellowBack.jpg" alt="" border="0"/>
+		</div>
+		<div class="mainbodytitle">
+			<table width="100%" border="0">
+				<tr>
+					<td class="white" align="center" width="33%"><b>Design</b></td>
+					<td class="white" align="center" width="33%"><b>Utilities</b></td>
+					<td class="white" align="center" width="33%"><b>Miscellaneous</b></td>
+				</tr>
+			</table>
+		</div>
+		<div class="mainbody">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF3" value="1" id="image1Num" src="images/01.jpg" onmouseover="showImageOver(1)" onmouseout="showImage(1)" align="middle"/><input type="image" name="@KEY:PF3" value="1" id="image1" src="images/Program.jpg" onmouseover="showImageOver(1)" onmouseout="showImage(1)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF20" value="9" id="image9Num" src="images/09.jpg" alt="" border="0" onmouseover="showImageOver(9)" onmouseout="showImage(9)" align="middle"/><input type="image" name="@KEY:PF20" value="9" id="image9" src="images/SearchFacility.jpg" alt="" border="0" onmouseover="showImageOver(9)" onmouseout="showImage(9)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF11" value="17" id="image17Num" src="images/17.jpg" alt="" border="0" onmouseover="showImageOver(17)" onmouseout="showImage(17)" align="middle"/><input type="image" name="@KEY:PF11" value="17" id="image17" src="images/SwitchUserName.jpg" alt="" border="0" onmouseover="showImageOver(17)" onmouseout="showImage(17)" align="middle"/></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF4" value="2" id="image2Num" src="images/02.jpg" alt="" border="0" onmouseover="showImageOver(2)" onmouseout="showImage(2)" align="middle"/><input type="image" name="@KEY:PF4" value="2" id="image2" src="images/Screen.jpg" alt="" border="0" onmouseover="showImageOver(2)" onmouseout="showImage(2)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="10" id="image10Num" src="images/10.jpg" alt="" border="0" onmouseover="showImageOver(10)" onmouseout="showImage(10)" align="middle"/><input type="image" name="choice" value="10" id="image10" src="images/SwitchUserName.jpg" alt="" border="0" onmouseover="showImageOver(10)" onmouseout="showImage(10)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="18" id="image18Num" src="images/18.jpg" alt="" border="0" onmouseover="showImageOver(18)" onmouseout="showImage(18)" align="middle"/><input type="image" name="choice" value="18" id="image18" src="images/RunAProgram.jpg" alt="" border="0" onmouseover="showImageOver(18)" onmouseout="showImage(18)" align="middle"/></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF4" value="3" id="image3Num" src="images/03.jpg" alt="" border="0" onmouseover="showImageOver(3)" onmouseout="showImage(3)" align="middle"/><input type="image" name="@KEY:PF5" value="3" id="image3" src="images/MANTISfileView.jpg" alt="" border="0" onmouseover="showImageOver(3)" onmouseout="showImage(3)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF14" value="11" id="image11Num" src="images/11.jpg" alt="" border="0" onmouseover="showImageOver(11)" onmouseout="showImage(11)" align="middle"/><input type="image" name="@KEY:PF14" value="11" id="image11" src="images/DirectoryFacility.jpg" alt="" border="0" onmouseover="showImageOver(11)" onmouseout="showImage(11)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="19" id="image19Num" src="images/19.jpg" alt="" border="0" onmouseover="showImageOver(19)" onmouseout="showImage(19)" align="middle"/><input type="image" name="choice" value="19" id="image19" src="images/DisplayaPrompter.jpg" alt="" border="0" onmouseover="showImageOver(19)" onmouseout="showImage(19)" align="middle"/></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF6" value="4" id="image4Num" src="images/04.jpg" alt="" border="0" onmouseover="showImageOver(4)" onmouseout="showImage(4)" align="middle"/><input type="image" name="@KEY:PF6" value="4" id="image4" src="images/Prompter.jpg" alt="" border="0" onmouseover="showImageOver(4)" onmouseout="showImage(4)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="12" id="image12Num" src="images/12.jpg" alt="" border="0" onmouseover="showImageOver(12)" onmouseout="showImage(12)" align="middle"/><input type="image" name="choice" value="12" id="image12" src="images/Transfer.jpg" alt="" border="0" onmouseover="showImageOver(12)" onmouseout="showImage(12)" align="middle"/></td>
+					<td align="center" width="33%"></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="@KEY:PF8" value="5" id="image5Num" src="images/05.jpg" alt="" border="0" onmouseover="showImageOver(5)" onmouseout="showImage(5)" align="middle"/><input type="image" name="@KEY:PF8" value="5" id="image5" src="images/Interface.jpg" alt="" border="0" onmouseover="showImageOver(5)" onmouseout="showImage(5)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="13" id="image13Num" src="images/13.jpg" alt="" border="0" onmouseover="showImageOver(13)" onmouseout="showImage(13)" align="middle"/><input type="image" name="choice" value="13" id="image13" src="images/UniversalExport.jpg" alt="" border="0" onmouseover="showImageOver(13)" onmouseout="showImage(13)" align="middle"/></td>
+					<td align="center" width="33%"></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="choice" value="6" id="image6Num" src="images/06.jpg" alt="" border="0" onmouseover="showImageOver(6)" onmouseout="showImage(6)" align="middle"/><input type="image" name="choice" value="6" id="image6" src="images/TotalFileView.jpg" alt="" border="0" onmouseover="showImageOver(6)" onmouseout="showImage(6)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="14" id="image14Num" src="images/14.jpg" alt="" border="0" onmouseover="showImageOver(14)" onmouseout="showImage(14)" align="middle"/><input type="image" name="choice" value="14" id="image14" src="images/CrossReference.jpg" alt="" border="0" onmouseover="showImageOver(14)" onmouseout="showImage(14)" align="middle"/></td>
+					<td align="center" width="33%"></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="choice" value="7" id="image7Num" src="images/07.jpg" alt="" border="0" onmouseover="showImageOver(7)" onmouseout="showImage(7)" align="middle"/><input type="image" name="choice" value="7" id="image7" src="images/ExternalFileView.jpg" alt="" border="0" onmouseover="showImageOver(7)" onmouseout="showImage(7)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="15" id="image15Num" src="images/15.jpg" alt="" border="0" onmouseover="showImageOver(15)" onmouseout="showImage(15)" align="middle"/><input type="image" name="choice" value="15" id="image15" src="images/PrintFacility.jpg" alt="" border="0" onmouseover="showImageOver(15)" onmouseout="showImage(15)" align="middle"/></td>
+					<td align="center" width="33%"></td>
+				</tr>
+				<tr>
+					<td align="center" width="33%"><input type="image" name="choice" value="8" id="image8Num" src="images/08.jpg" alt="" border="0" onmouseover="showImageOver(8)" onmouseout="showImage(8)" align="middle"/><input type="image" name="choice" value="8" id="image8" src="images/DLIAccessView.jpg" alt="" border="0" onmouseover="showImageOver(8)" onmouseout="showImage(8)" align="middle"/></td>
+					<td align="center" width="33%"><input type="image" name="choice" value="16" id="image16Num" src="images/16.jpg" alt="" border="0" onmouseover="showImageOver(16)" onmouseout="showImage(16)" align="middle"/><input type="image" name="choice" value="16" id="image16" src="images/QueryReportWriter.jpg" alt="" border="0" onmouseover="showImageOver(16)" onmouseout="showImage(16)" align="middle"/></td>
+					<td align="center" width="33%"></td>
+				</tr>
+			</table>
+			<br/><br/>
+				<table align="left" border="0" width="100%">
+					<tr>
+						<td width="33%"><b>Option Number:&#160;&#160;</b><!--<input type="text" size="3" name="choice"/>-->
+						
+						<xsl:choose>
+						<xsl:when test="OPTION/@PRO='N'">
+						<input size="2" value="" name="OPTION" maxlength="2" onKeyPress="modified(this, 'MASTER:FACILITY-OPTION');">
+						<xsl:attribute name="value">
+						<xsl:value-of select="OPTION"/>
+						</xsl:attribute>
+						</input>
+						</xsl:when>
+						<xsl:otherwise>
+						<span class="white">
+						<xsl:call-template name="ControlWhitespace"/>
+						</span>
+						</xsl:otherwise>
+						</xsl:choose>
+						
+						</td>
+					</tr>
+					<tr>
+						<td width="33%"/>
+						<td>
+						<input id="submitButton1" type="image" src="images/placeholder.gif" border="0" style="width:60px; height:30px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/Submit.png', sizingMethod='image')" name="@KEY:ENTER" onmouseover="showSubmitButtonOver(1)" onmouseout="showSubmitButton(1)"/>
+						<input id="submitButton2" type="image" src="images/placeholder.gif" border="0" style="width:60px; height:30px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/Cancel.png', sizingMethod='image')" name="@KEY:CANCEL" onmouseover="showSubmitButtonOver(2)" onmouseout="showSubmitButton(2)" />
+						<input id="submitButton3" type="image" src="images/placeholder.gif" border="0" style="width:60px; height:30px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/Exit.png', sizingMethod='image')" name="@KEY:CLEAR" onmouseover="showSubmitButtonOver(3)" onmouseout="showSubmitButton(3)"/>
+<!--						<input type="image" value="1" src="images/Submit.png" name="@KEY:ENTER" onmouseover="showSubmitButtonOver(1)" onmouseout="showSubmitButton(1)"/>
+						<input type="image" value="1" src="images/Cancel.png" name="@KEY:CANCEL" onmouseover="showSubmitButtonOver(2)" onmouseout="showSubmitButton(2)"/>
+						<input type="image" value="1" src="images/Exit.png" name="@KEY:CANCEL" onmouseover="showSubmitButtonOver(3)" onmouseout="showSubmitButton(3)"/>
+-->
+						</td>
+					</tr>
+					<tr>
+						<td width="33%"/>
+						<td><xsl:apply-templates select="//NOTE" mode="output"/></td>
+					</tr>
+				</table>
+		</div>
+		<script type="text/javascript">
+			if (!is_ie)
+			{
+				var btn = document.getElementById('submitButton1');
+				if(btn)
+					btn.src = 'images/Submit.png';
+				btn = document.getElementById('submitButton2');
+				if(btn)
+					btn.src = 'images/Cancel.png';
+				btn = document.getElementById('submitButton3');
+				if(btn)
+					btn.src = 'images/Exit.png';
+			}
+		</script>
+</xsl:template>
+</xsl:stylesheet>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<!-- CONTROL-XMLPrompter -->
+<ns1:PROMPTERDATA xmlns:ns1="http://appdev.cincom.com/MantisServer" NAME="MANTIS-System-Default">
+<PROMPTER>
+	<HEADER>The PROMPTER is not found (refer to the title bar for the name).</HEADER>
+	<LINE>Contact your System Adminstrator.</LINE>
+	<LINE>Prompter data must be exported.</LINE>
+</PROMPTER>
+<PROMPTER>
+	<HEADER>Export the Prompter from MANTIS</HEADER>
+	<LINE>Use the MANTIS Universal Export Facility to export the prompter.</LINE>
+</PROMPTER>
+</ns1:PROMPTERDATA>
