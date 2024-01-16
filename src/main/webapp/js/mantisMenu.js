@@ -366,7 +366,8 @@ function mantisMenu(menuSelect, menuOptions) {
 				var subMenu2="closed";
 				
 				//show sub-menu on hover
-				nav.eq(i).on('mouseenter',function() {
+				nav.eq(i).mouseenter(function() {
+				//nav.eq(i).on('mouseenter',function() {	// DFS - 20240111
 					if (mmScale !== 'mobile') {
 						if (__M$.isMobile == true) {return}
 						
@@ -387,7 +388,8 @@ function mantisMenu(menuSelect, menuOptions) {
 				});	
 				
 				//navigate sub-menu on with key presses
-				nav.eq(i).off('keydown').on('keydown',function(e) {
+				//nav.eq(i).off('keydown').on('keydown',function(e) {	// DFS - 20240111
+				nav.eq(i).keydown(function(e) {
 					if(e.which === 32 || e.which === 13 || e.which === 40) {
 						if (mmSet.location === 'leftVertical') {
 							$(this).siblings().find("ul").hide("slide",{direction: "left"},mmSet.speed);
